@@ -1,61 +1,50 @@
 
-
 <!DOCTYPE html>
 
-
-<html lang="en" >
-
+<html>
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
     <title>Multivariate calculus &#8212; ML book</title>
-  
-  
-  
-  <script data-cfasync="false">
-    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
-    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
-  </script>
-  
+    
   <!-- Loaded before other Sphinx assets -->
-  <link href="../../_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
-<link href="../../_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
-<link href="../../_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link href="../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
 
-  
-  <link href="../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+    
+  <link rel="stylesheet"
+    href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
 
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
-    <link rel="stylesheet" href="../../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" href="../../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/proof.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
-  
+    <link rel="stylesheet" type="text/css" href="../../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
+    
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
-<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+  <link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
 
     <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/jquery.js"></script>
     <script src="../../_static/underscore.js"></script>
-    <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../../_static/doctools.js"></script>
     <script src="../../_static/clipboard.min.js"></script>
     <script src="../../_static/copybutton.js"></script>
-    <script src="../../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
     <script src="../../_static/togglebutton.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
-    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../../_static/design-tabs.js"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
 const thebe_selector = ".thebe,.cell"
@@ -65,93 +54,61 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'math/calculus/multivariate';</script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="Matrix calculus" href="matrix_diff.html" />
     <link rel="prev" title="1-d calculus" href="1-d.html" />
-  <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <meta name="docsearch:language" content="en"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
   </head>
-  
-  
-  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
 
-  
-  
-  <a class="skip-link" href="#main-content">Skip to main content</a>
-  
-  <input type="checkbox"
-          class="sidebar-toggle"
-          name="__primary"
-          id="__primary"/>
-  <label class="overlay overlay-primary" for="__primary"></label>
-  
-  <input type="checkbox"
-          class="sidebar-toggle"
-          name="__secondary"
-          id="__secondary"/>
-  <label class="overlay overlay-secondary" for="__secondary"></label>
-  
-  <div class="search-button__wrapper">
-    <div class="search-button__overlay"></div>
-    <div class="search-button__search-container">
-<form class="bd-search d-flex align-items-center"
-      action="../../search.html"
-      method="get">
-  <i class="fa-solid fa-magnifying-glass"></i>
-  <input type="search"
-         class="form-control"
-         name="q"
-         id="search-input"
-         placeholder="Search this book..."
-         aria-label="Search this book..."
-         autocomplete="off"
-         autocorrect="off"
-         autocapitalize="off"
-         spellcheck="false"/>
-  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
-</form></div>
-  </div>
-  
-    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
-    </nav>
-  
-  <div class="bd-container">
-    <div class="bd-container__inner bd-page-width">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../../index.html">
       
-      <div class="bd-sidebar-primary bd-sidebar">
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
         
-
-  
-  <div class="sidebar-header-items sidebar-primary__section">
-    
-    
-    
-    
-  </div>
-  
-    <div class="sidebar-primary-items__start sidebar-primary__section">
-        <div class="sidebar-primary-item">
-  
-
-<a class="navbar-brand logo" href="../../README.html">
-  
-  
-  
-  
-    
-    
       
-    
-    
-    <img src="../../_static/logo.png" class="logo__image only-light" alt="Logo image"/>
-    <script>document.write(`<img src="../../_static/logo.png" class="logo__image only-dark" alt="Logo image"/>`);</script>
-  
-  
-</a></div>
-        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
-    <div class="bd-toc-item navbar-nav active">
+      
+      <img src="../../_static/logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">ML book</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
         
         <ul class="nav bd-sidenav bd-sidenav__home-link">
             <li class="toctree-l1">
@@ -160,360 +117,1056 @@ const thebe_selector_output = ".output, .cell_output"
                 </a>
             </li>
         </ul>
-        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Introduction to ML</span></p>
+        <p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Introduction to ML
+ </span>
+</p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1 has-children"><a class="reference internal" href="../../intro/intro_to_ML.html">Overview</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../intro/definition.html">Definitions of ML</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../intro/applications.html">Applications of ML</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../intro/data.html">Data</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../intro/ml_types.html">Types of ML</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../intro/knn.html">k-Nearest Neighbors</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../intro/model_selection.html">Model selection</a></li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../intro/intro_to_ML.html">
+   Overview
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../intro/definition.html">
+     Definitions of ML
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../intro/applications.html">
+     Applications of ML
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../intro/data.html">
+     Data
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../intro/ml_types.html">
+     Types of ML
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../intro/knn.html">
+     k-Nearest Neighbors
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../intro/model_selection.html">
+     Model selection
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../lin_reg/linear_regression.html">
+   Linear regression
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../lin_reg/simple.html">
+     Simple linear regression
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../lin_reg/polynomial.html">
+     Polynomial regression
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../lin_reg/multiple.html">
+     Multiple linear regression
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../lin_reg/regularization.html">
+     Regularization
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../lin_reg/numeric_opt.html">
+     Numeric optimization
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../lin_reg/general.html">
+     General linear model
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../linear_classification/classification.html">
+   Linear classification
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../linear_classification/log_reg.html">
+     Logistic regression
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../linear_classification/multi_log_reg.html">
+     Multinomial logistic regression
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../linear_classification/num_opt_log_reg.html">
+     Numeric optimization
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../linear_classification/svm.html">
+     Support Vector Machines (SVM)
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../eval_metrics/metrics.html">
+   Evaluation Metrics
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../eval_metrics/classification.html">
+     Classification Metrics
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../eval_metrics/ROC-AUC.html">
+     ROC-AUC
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../eval_metrics/regression.html">
+     Regression metrics
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../eval_metrics/cross_val.html">
+     Cross-validation
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../eval_metrics/hyperparameters.html">
+     Hyperparameters tuning
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../probabilistic_models/probabilistic.html">
+   Probabilistic models
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+  <label for="toctree-checkbox-5">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../probabilistic_models/bayesian_inference.html">
+     Bayesian inference
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../probabilistic_models/lin_reg_prob.html">
+     Probabilistic models for linear regression
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../probabilistic_models/log_reg_prob.html">
+     Probabilistic models for logistic regression
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../probabilistic_models/LDA.html">
+     Linear Discriminant Analysis (QDA)
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../probabilistic_models/QDA.html">
+     Quadratic Discriminant Analysis (QDA)
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../probabilistic_models/naive_bayes.html">
+     Naive Bayes classifier
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../decision_trees/decision_tree.html">
+   Decision Trees
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+  <label for="toctree-checkbox-6">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../decision_trees/classification.html">
+     Classification tree
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../decision_trees/regression.html">
+     Regression tree
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../decision_trees/impurity.html">
+     Impurity and information criterions
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../decision_trees/pruning.html">
+     Tree pruning
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../ensembling/ensemble.html">
+   Ensembling
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
+  <label for="toctree-checkbox-7">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../ensembling/bias_variance.html">
+     Bias-variance decomposition
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../ensembling/voting_stacking_blending.html">
+     Voting, stacking and blending
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../ensembling/bagging.html">
+     Bagging
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../ensembling/random_forest.html">
+     Random forests
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../gradient_boosting/gradient_boosting.html">
+   Gradient boosting
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
+  <label for="toctree-checkbox-8">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../gradient_boosting/boosting.html">
+     Boosting and additive modeling
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../gradient_boosting/generic_gb.html">
+     Generic gradient boosting
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../gradient_boosting/adaboost.html">
+     AdaBoost
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../gradient_boosting/xgboost.html">
+     XGBoost
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../gradient_boosting/catboost.html">
+     CatBoost
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../unsupervised_learning/unsupervised.html">
+   Unsupervised Learning
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/>
+  <label for="toctree-checkbox-9">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../unsupervised_learning/pca.html">
+     Principal components analysis (PCA)
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../unsupervised_learning/clustering_metrics.html">
+     Clustering metrics
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../unsupervised_learning/k_means.html">
+     K-means
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../unsupervised_learning/hierarchic_clustering.html">
+     Hierarchical Clustering
+    </a>
+   </li>
+  </ul>
+ </li>
 </ul>
-</li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../../lin_reg/linear_regression.html">Linear regression</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../lin_reg/simple.html">Simple linear regression</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../lin_reg/polynomial.html">Polynomial regression</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../lin_reg/multiple.html">Multiple linear regression</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../lin_reg/regularization.html">Regularization</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../lin_reg/numeric_opt.html">Numeric optimization</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../lin_reg/general.html">General linear model</a></li>
-</ul>
-</li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../../linear_classification/classification.html">Linear classification</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../linear_classification/log_reg.html">Logistic regression</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../linear_classification/multi_log_reg.html">Multinomial logistic regression</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../linear_classification/num_opt_log_reg.html">Numeric optimization</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../linear_classification/svm.html">Support Vector Machines (SVM)</a></li>
-</ul>
-</li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../../eval_metrics/metrics.html">Evaluation Metrics</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../eval_metrics/classification.html">Classification Metrics</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../eval_metrics/ROC-AUC.html">ROC-AUC</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../eval_metrics/regression.html">Regression metrics</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../eval_metrics/cross_val.html">Cross-validation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../eval_metrics/hyperparameters.html">Hyperparameters tuning</a></li>
-</ul>
-</li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../../probabilistic_models/probabilistic.html">Probabilistic models</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../probabilistic_models/bayesian_inference.html">Bayesian inference</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../probabilistic_models/lin_reg_prob.html">Probabilistic models for linear regression</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../probabilistic_models/log_reg_prob.html">Probabilistic models for logistic regression</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../probabilistic_models/LDA.html">Linear Discriminant Analysis (QDA)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../probabilistic_models/QDA.html">Quadratic Discriminant Analysis (QDA)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../probabilistic_models/naive_bayes.html">Naive Bayes classifier</a></li>
-</ul>
-</li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../../decision_trees/decision_tree.html">Decision Trees</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../decision_trees/classification.html">Classification tree</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../decision_trees/regression.html">Regression tree</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../decision_trees/impurity.html">Impurity and information criterions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../decision_trees/pruning.html">Tree pruning</a></li>
-</ul>
-</li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../../ensembling/ensemble.html">Ensembling</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-7"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../ensembling/bias_variance.html">Bias-variance decomposition</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../ensembling/voting_stacking_blending.html">Voting, stacking and blending</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../ensembling/bagging.html">Bagging</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../ensembling/random_forest.html">Random forests</a></li>
-</ul>
-</li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../../gradient_boosting/gradient_boosting.html">Gradient boosting</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-8"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../gradient_boosting/boosting.html">Boosting and additive modeling</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../gradient_boosting/generic_gb.html">Generic gradient boosting</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../gradient_boosting/adaboost.html">AdaBoost</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../gradient_boosting/xgboost.html">XGBoost</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../gradient_boosting/catboost.html">CatBoost</a></li>
-</ul>
-</li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../../unsupervised_learning/unsupervised.html">Unsupervised Learning</a><input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-9"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../unsupervised_learning/pca.html">Principal components analysis (PCA)</a></li>
-
-<li class="toctree-l2"><a class="reference internal" href="../../unsupervised_learning/clustering_metrics.html">Clustering metrics</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../unsupervised_learning/k_means.html">K-means</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../unsupervised_learning/hierarchic_clustering.html">Hierarchical Clustering</a></li>
-</ul>
-</li>
-</ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Deep Learning</span></p>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Deep Learning
+ </span>
+</p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1 has-children"><a class="reference internal" href="../../mlp/mlp.html">Multilayer perceptron (MLP)</a><input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-10"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../mlp/layers.html">Layers of MLP</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../mlp/forward_backward_pass.html">Forward and backward pass</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../mlp/activations.html">Activation functions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../mlp/backprop.html">Back propagation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../mlp/weight_init.html">Weights initialization</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../mlp/regularization.html">Regularization in MLP</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../mlp/optimization_dl.html">Optimization in DL</a></li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../mlp/mlp.html">
+   Multilayer perceptron (MLP)
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/>
+  <label for="toctree-checkbox-10">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../mlp/layers.html">
+     Layers of MLP
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../mlp/forward_backward_pass.html">
+     Forward and backward pass
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../mlp/activations.html">
+     Activation functions
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../mlp/backprop.html">
+     Back propagation
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../mlp/weight_init.html">
+     Weights initialization
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../mlp/regularization.html">
+     Regularization in MLP
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../mlp/optimization_dl.html">
+     Optimization in DL
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../cnn/cnn.html">
+   CNN
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/>
+  <label for="toctree-checkbox-11">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../cnn/convolutions_2d.html">
+     Convolution of matrices
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../cnn/convolutions_3d.html">
+     Convolutions of tensors
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../cnn/pooling.html">
+     Pooling
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../cnn/back_prop.html">
+     Back propagation in CNN
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../cnn/augmentation.html">
+     Data augmentation
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../cnn/architectures.html">
+     Architectures of CNN
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../rnn/sequential.html">
+   Sequential NNs
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" type="checkbox"/>
+  <label for="toctree-checkbox-12">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../rnn/vanilla_rnn.html">
+     Vanilla RNN
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../rnn/lstm.html">
+     LSTM
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../rnn/gru.html">
+     GRU
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../rnn/attention.html">
+     Attention
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../rnn/transformers.html">
+     Transformers
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../gm/generative.html">
+   Generative models
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-13" name="toctree-checkbox-13" type="checkbox"/>
+  <label for="toctree-checkbox-13">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../gm/autoencoders.html">
+     Autoencoders
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../gm/vae.html">
+     Variational autoencoders (VAE)
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../gm/gan.html">
+     Ganerative adversarial networks (GAN)
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../rl/RL.html">
+   Reinforcement Learning
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-14" name="toctree-checkbox-14" type="checkbox"/>
+  <label for="toctree-checkbox-14">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../rl/basics.html">
+     RL basics
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../rl/multiarmed_bandits.html">
+     Multiarmed bandits
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../rl/mdp.html">
+     Markov decision process (MDP)
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../rl/q_learning.html">
+     Q-learning
+    </a>
+   </li>
+  </ul>
+ </li>
 </ul>
-</li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../../cnn/cnn.html">CNN</a><input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-11"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../cnn/convolutions_2d.html">Convolution of matrices</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../cnn/convolutions_3d.html">Convolutions of tensors</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../cnn/pooling.html">Pooling</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../cnn/back_prop.html">Back propagation in CNN</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../cnn/augmentation.html">Data augmentation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../cnn/architectures.html">Architectures of CNN</a></li>
-</ul>
-</li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../../rnn/sequential.html">Sequential NNs</a><input class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-12"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../rnn/vanilla_rnn.html">Vanilla RNN</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../rnn/lstm.html">LSTM</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../rnn/gru.html">GRU</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../rnn/attention.html">Attention</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../rnn/transformers.html">Transformers</a></li>
-</ul>
-</li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../../gm/generative.html">Generative models</a><input class="toctree-checkbox" id="toctree-checkbox-13" name="toctree-checkbox-13" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-13"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../gm/autoencoders.html">Autoencoders</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../gm/vae.html">Variational autoencoders (VAE)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../gm/gan.html">Ganerative adversarial networks (GAN)</a></li>
-</ul>
-</li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../../rl/RL.html">Reinforcement Learning</a><input class="toctree-checkbox" id="toctree-checkbox-14" name="toctree-checkbox-14" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-14"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../rl/basics.html">RL basics</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../rl/multiarmed_bandits.html">Multi-armed bandits</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../rl/mdp.html">Markov Decision Process (MDP)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../rl/q_learning.html">Q-learning</a></li>
-</ul>
-</li>
-</ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Python for ML</span></p>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Python for ML
+ </span>
+</p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1 has-children"><a class="reference internal" href="../../python/python_basics.html">Python Basics</a><input class="toctree-checkbox" id="toctree-checkbox-15" name="toctree-checkbox-15" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-15"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../python/basics/basic_types.html">Basic Types</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../python/basics/variables.html">Variables</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../python/basics/control_flow.html">Control flow</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../python/basics/functions_strings.html">Functions</a></li>
-
-<li class="toctree-l2"><a class="reference internal" href="../../python/basics/classes.html">Classes</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../python/basics/ISLP_lab.html">ISLP Lab</a></li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../python/python_basics.html">
+   Python Basics
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-15" name="toctree-checkbox-15" type="checkbox"/>
+  <label for="toctree-checkbox-15">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../python/basics/basic_types.html">
+     Basic Types
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../python/basics/variables.html">
+     Variables
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../python/basics/control_flow.html">
+     Control flow
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../python/basics/functions_strings.html">
+     Functions
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../python/basics/classes.html">
+     Classes
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../python/basics/ISLP_lab.html">
+     ISLP Lab
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../python/numpy.html">
+   NumPy
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../python/pandas.html">
+   Pandas
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../python/visual.html">
+   Data visualization
+  </a>
+ </li>
 </ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../../python/numpy.html">NumPy</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../python/pandas.html">Pandas</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../python/visual.html">Data visualization</a></li>
-</ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Math for ML</span></p>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Math for ML
+ </span>
+</p>
 <ul class="current nav bd-sidenav">
-<li class="toctree-l1 has-children"><a class="reference internal" href="../linear_algebra.html">Linear Algebra</a><input class="toctree-checkbox" id="toctree-checkbox-16" name="toctree-checkbox-16" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-16"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../lin_alg/vectors.html">Vectors</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../lin_alg/matrices.html">Matrices</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../lin_alg/linear_systems.html">Linear systems</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../lin_alg/inverse.html">Inverse matrix</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../lin_alg/rank.html">Rank of a matrix</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../lin_alg/orthogonality.html">Orthogonality</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../lin_alg/projections.html">Orthogonal projections</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../lin_alg/determinant.html">Determinants</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../lin_alg/eig.html">Eigenvalues and eigenvectors</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../lin_alg/diagonalize.html">Diagonalization</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../lin_alg/matrix_norms.html">Matrix norms</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../lin_alg/SVD.html">Singular Value Decomposition (SVD)</a></li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../linear_algebra.html">
+   Linear Algebra
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-16" name="toctree-checkbox-16" type="checkbox"/>
+  <label for="toctree-checkbox-16">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../lin_alg/vectors.html">
+     Vectors
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../lin_alg/matrices.html">
+     Matrices
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../lin_alg/linear_systems.html">
+     Linear systems
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../lin_alg/inverse.html">
+     Inverse matrix
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../lin_alg/rank.html">
+     Rank of a matrix
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../lin_alg/orthogonality.html">
+     Orthogonality
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../lin_alg/projections.html">
+     Orthogonal projections
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../lin_alg/determinant.html">
+     Determinants
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../lin_alg/eig.html">
+     Eigenvalues and eigenvectors
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../lin_alg/diagonalize.html">
+     Diagonalization
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../lin_alg/matrix_norms.html">
+     Matrix norms
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../lin_alg/SVD.html">
+     Singular Value Decomposition (SVD)
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="../calculus.html">
+   Calculus
+  </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-17" name="toctree-checkbox-17" type="checkbox"/>
+  <label for="toctree-checkbox-17">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="current">
+   <li class="toctree-l2">
+    <a class="reference internal" href="1-d.html">
+     1-d calculus
+    </a>
+   </li>
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     Multivariate calculus
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="matrix_diff.html">
+     Matrix calculus
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../probability.html">
+   Probability
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-18" name="toctree-checkbox-18" type="checkbox"/>
+  <label for="toctree-checkbox-18">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../proba/entropy.html">
+     Entropy
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../statistics.html">
+   Statistics
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-19" name="toctree-checkbox-19" type="checkbox"/>
+  <label for="toctree-checkbox-19">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../stats/MLE.html">
+     Maximum likelihood estimation (MLE)
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../optimization.html">
+   Optimization
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-20" name="toctree-checkbox-20" type="checkbox"/>
+  <label for="toctree-checkbox-20">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../optimization/GD.html">
+     Gradient descent
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../optimization/SGD.html">
+     Stochastic gradient descent
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../optimization/newton.html">
+     Newton’s method
+    </a>
+   </li>
+  </ul>
+ </li>
 </ul>
-</li>
-<li class="toctree-l1 current active has-children"><a class="reference internal" href="../calculus.html">Calculus</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-17" name="toctree-checkbox-17" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-17"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="1-d.html">1-d calculus</a></li>
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">Multivariate calculus</a></li>
-<li class="toctree-l2"><a class="reference internal" href="matrix_diff.html">Matrix calculus</a></li>
-</ul>
-</li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../probability.html">Probability</a><input class="toctree-checkbox" id="toctree-checkbox-18" name="toctree-checkbox-18" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-18"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../proba/entropy.html">Entropy</a></li>
-</ul>
-</li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../statistics.html">Statistics</a><input class="toctree-checkbox" id="toctree-checkbox-19" name="toctree-checkbox-19" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-19"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../stats/MLE.html">Maximum likelihood estimation (MLE)</a></li>
-</ul>
-</li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../optimization.html">Optimization</a><input class="toctree-checkbox" id="toctree-checkbox-20" name="toctree-checkbox-20" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-20"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../optimization/GD.html">Gradient descent</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../optimization/SGD.html">Stochastic gradient descent</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../optimization/newton.html">Newton’s method</a></li>
-</ul>
-</li>
-</ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">HW</span></p>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  References
+ </span>
+</p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../../not_mnist_student.html">HW notMNIST</a></li>
-</ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">References</span></p>
-<ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../../notation.html">Notation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../bibliography.html">Bibliography</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../resources.html">ML resources</a></li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../notation.html">
+   Notation
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../bibliography.html">
+   Bibliography
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../resources.html">
+   ML resources
+  </a>
+ </li>
 </ul>
 
     </div>
 </nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
+            
+            <div class="navbar_extra_footer">
+            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+            </div>
+            
+        </div>
     </div>
-  
-  
-  <div class="sidebar-primary-items__end sidebar-primary__section">
-  </div>
-  
-  <div id="rtd-footer-container"></div>
-
-
-      </div>
-      
-      <main id="main-content" class="bd-main">
-        
-        
-
-<div class="sbt-scroll-pixel-helper"></div>
-
-          <div class="bd-content">
-            <div class="bd-article-container">
-              
-              <div class="bd-header-article">
-<div class="header-article-items header-article__inner">
-  
-    <div class="header-article-items__start">
-      
-        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
-  <span class="fa-solid fa-bars"></span>
-</label></div>
-      
-    </div>
-  
-  
-    <div class="header-article-items__end">
-      
-        <div class="header-article-item">
-
-<div class="article-header-buttons">
-
-
-
-
-
-<div class="dropdown dropdown-download-buttons">
-  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
-    <i class="fas fa-download"></i>
-  </button>
-  <ul class="dropdown-menu">
-      
-      
-      
-      <li><a href="../../_sources/math/calculus/multivariate.ipynb" target="_blank"
-   class="btn btn-sm btn-download-source-button dropdown-item"
-   title="Download source file"
-   data-bs-placement="left" data-bs-toggle="tooltip"
->
-  
-
-<span class="btn__icon-container">
-  <i class="fas fa-file"></i>
-  </span>
-<span class="btn__text-container">.ipynb</span>
-</a>
-</li>
-      
-      
-      
-      
-      <li>
-<button onclick="window.print()"
-  class="btn btn-sm btn-download-pdf-button dropdown-item"
-  title="Print to PDF"
-  data-bs-placement="left" data-bs-toggle="tooltip"
->
-  
-
-<span class="btn__icon-container">
-  <i class="fas fa-file-pdf"></i>
-  </span>
-<span class="btn__text-container">.pdf</span>
-</button>
-</li>
-      
-  </ul>
+    <div id="rtd-footer-container"></div>
 </div>
 
 
+          
 
 
-<button onclick="toggleFullScreen()"
-  class="btn btn-sm btn-fullscreen-button"
-  title="Fullscreen mode"
-  data-bs-placement="bottom" data-bs-toggle="tooltip"
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
 >
   
 
-<span class="btn__icon-container">
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
   <i class="fas fa-expand"></i>
   </span>
 
 </button>
 
-
-<script>
-document.write(`
-  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
-    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
-    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
   </button>
-`);
-</script>
-
-<script>
-document.write(`
-  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass"></i>
-  </button>
-`);
-</script>
-<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="fa-solid fa-list"></span>
-</label>
-</div></div>
-      
-    </div>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="../../_sources/math/calculus/multivariate.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
   
-</div>
-</div>
-              
-              
 
-<div id="jb-print-docs-body" class="onlyprint">
-    <h1>Multivariate calculus</h1>
-    <!-- Table of contents -->
-    <div id="print-main-content">
-        <div id="jb-print-toc">
-            
-            <div>
-                <h2> Contents </h2>
-            </div>
-            <nav aria-label="Page">
-                <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#differentials-of-scalar-functions">Differentials of scalar functions</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#functions-of-vectors">Functions of vectors</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#functions-of-matrices">Functions of matrices</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#gradients-shape">Gradients shape</a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#differentials-of-vector-functions">Differentials of vector functions</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#applying-a-function-elementwise">Applying a function elementwise</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#linear-matrix-function">Linear matrix function</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#vector-to-vector-functions">Vector-to-vector functions</a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rules-of-differentiation">Rules of differentiation</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#second-differential">Second differential</a></li>
-</ul>
-            </nav>
-        </div>
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.ipynb</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
     </div>
 </div>
 
-              
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#differentials-of-scalar-functions">
+   Differentials of scalar functions
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#functions-of-vectors">
+     Functions of vectors
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#functions-of-matrices">
+     Functions of matrices
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#gradients-shape">
+     Gradients shape
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#differentials-of-vector-functions">
+   Differentials of vector functions
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#applying-a-function-elementwise">
+     Applying a function elementwise
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#linear-matrix-function">
+     Linear matrix function
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#vector-to-vector-functions">
+     Vector-to-vector functions
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#rules-of-differentiation">
+   Rules of differentiation
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#second-differential">
+   Second differential
+  </a>
+ </li>
+</ul>
+
+    </nav>
+</div>
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Multivariate calculus</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#differentials-of-scalar-functions">
+   Differentials of scalar functions
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#functions-of-vectors">
+     Functions of vectors
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#functions-of-matrices">
+     Functions of matrices
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#gradients-shape">
+     Gradients shape
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#differentials-of-vector-functions">
+   Differentials of vector functions
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#applying-a-function-elementwise">
+     Applying a function elementwise
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#linear-matrix-function">
+     Linear matrix function
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#vector-to-vector-functions">
+     Vector-to-vector functions
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#rules-of-differentiation">
+   Rules of differentiation
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#second-differential">
+   Second differential
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <main id="main-content" role="main">
                 
-<div id="searchbox"></div>
-                <article class="bd-article" role="main">
-                  
+              <div>
+                
   <section class="tex2jax_ignore mathjax_ignore" id="multivariate-calculus">
-<h1>Multivariate calculus<a class="headerlink" href="#multivariate-calculus" title="Permalink to this heading">#</a></h1>
+<h1>Multivariate calculus<a class="headerlink" href="#multivariate-calculus" title="Permalink to this headline">#</a></h1>
 <p>Перейдём теперь к более общей ситуации. Пусть заданы два конечномерных пространства <span class="math notranslate nohighlight">\(U\)</span> и <span class="math notranslate nohighlight">\(V\)</span> (например, векторов или матриц). Функция <span class="math notranslate nohighlight">\(f \colon X \to V\)</span>, <span class="math notranslate nohighlight">\(X \subset U\)</span>, дифференцируема в точке <span class="math notranslate nohighlight">\(x\in X\)</span>, если найдётся такой линейный оператор <span class="math notranslate nohighlight">\(L\colon U \to V\)</span>, что справедливо равенство</p>
 <div class="math notranslate nohighlight">
 \[
@@ -529,13 +1182,13 @@ f(x+h) - f(x) \approx Df(x)[h].
 <p>Нотация <span class="math notranslate nohighlight">\(Df(x)[h]\)</span> для дифференциала выглядит несколько громоздко, зато в неё явно включены обе переменные, от которых зависит дифференциал. При вычислении дифференциала функции <span class="math notranslate nohighlight">\(f\)</span> в произвольной точке <span class="math notranslate nohighlight">\(x\)</span> часто используют более короткую запись <span class="math notranslate nohighlight">\(df(x)\)</span> или даже <span class="math notranslate nohighlight">\(df\)</span>; переменная приращения в таких случаях традиционно обозначается через <span class="math notranslate nohighlight">\(dx\)</span>. Обозначение <span class="math notranslate nohighlight">\(dx\)</span> следует воспринимать как единый неделимый символ, по смыслу полностью тождественный приращению <span class="math notranslate nohighlight">\(h\)</span>.</p>
 </div>
 <section id="differentials-of-scalar-functions">
-<h2>Differentials of scalar functions<a class="headerlink" href="#differentials-of-scalar-functions" title="Permalink to this heading">#</a></h2>
+<h2>Differentials of scalar functions<a class="headerlink" href="#differentials-of-scalar-functions" title="Permalink to this headline">#</a></h2>
 <p>In the previous section we considered the simplest case when <span class="math notranslate nohighlight">\(f \colon \mathbb R \to \mathbb R\)</span> — скалярная функция скалярного аргумента. Тогда её дифференциал записывается как <span class="math notranslate nohighlight">\(df(x) = f'(x) dx\)</span> или <span class="math notranslate nohighlight">\(Df(x)[h] = f'(x)h\)</span>. Линейный оператор из <span class="math notranslate nohighlight">\(\mathbb R\)</span> в <span class="math notranslate nohighlight">\(\mathbb R\)</span> задаётся одним действительным числом, и в данном случае оно равно <span class="math notranslate nohighlight">\(f'(x)\)</span>. Now see what happens when the function <span class="math notranslate nohighlight">\(f\)</span> has multidimensional domain.</p>
 <section id="functions-of-vectors">
-<h3>Functions of vectors<a class="headerlink" href="#functions-of-vectors" title="Permalink to this heading">#</a></h3>
+<h3>Functions of vectors<a class="headerlink" href="#functions-of-vectors" title="Permalink to this headline">#</a></h3>
 <p>Пусть <span class="math notranslate nohighlight">\(f\colon \mathbb R^n \to \mathbb R\)</span> — скалярная функция векторного аргумента <span class="math notranslate nohighlight">\(\boldsymbol x = (x_1, \ldots, x_n)^\top\)</span> (под вектором по умолчанию понимается вектор-столбец). Тогда</p>
 <div class="math notranslate nohighlight" id="equation-vector-func-diff">
-<span class="eqno">(50)<a class="headerlink" href="#equation-vector-func-diff" title="Permalink to this equation">#</a></span>\[	Df(\boldsymbol x)[\boldsymbol h] = \sum\limits_{i=1}^n
+<span class="eqno">(46)<a class="headerlink" href="#equation-vector-func-diff" title="Permalink to this equation">#</a></span>\[	Df(\boldsymbol x)[\boldsymbol h] = \sum\limits_{i=1}^n
 	\frac{\partial f(\boldsymbol x)}        {\partial 	 x_i} h_i = 
 	\langle \nabla f(\boldsymbol x), \boldsymbol h\rangle = 
 	\nabla     f       (\boldsymbol x)^\top 		\boldsymbol h,\]</div>
@@ -578,10 +1231,10 @@ f(x+h) - f(x) \approx Df(x)[h].
 </div>
 </section>
 <section id="functions-of-matrices">
-<h3>Functions of matrices<a class="headerlink" href="#functions-of-matrices" title="Permalink to this heading">#</a></h3>
-<p>Пусть <span class="math notranslate nohighlight">\(f\colon \mathbb R^{m\times n} \to \mathbb R\)</span> — скалярная функция матричного аргумента <span class="math notranslate nohighlight">\(\boldsymbol X\)</span>. Такую функцию можно представлять себе как функцию от вектора из <span class="math notranslate nohighlight">\(\mathbb R^{mn}\)</span> в <span class="math notranslate nohighlight">\(\mathbb R\)</span> и дифференцировать аналогично <a class="reference internal" href="#equation-vector-func-diff">(50)</a>:</p>
+<h3>Functions of matrices<a class="headerlink" href="#functions-of-matrices" title="Permalink to this headline">#</a></h3>
+<p>Пусть <span class="math notranslate nohighlight">\(f\colon \mathbb R^{m\times n} \to \mathbb R\)</span> — скалярная функция матричного аргумента <span class="math notranslate nohighlight">\(\boldsymbol X\)</span>. Такую функцию можно представлять себе как функцию от вектора из <span class="math notranslate nohighlight">\(\mathbb R^{mn}\)</span> в <span class="math notranslate nohighlight">\(\mathbb R\)</span> и дифференцировать аналогично <a class="reference internal" href="#equation-vector-func-diff">(46)</a>:</p>
 <div class="math notranslate nohighlight" id="equation-matrix-func-diff">
-<span class="eqno">(51)<a class="headerlink" href="#equation-matrix-func-diff" title="Permalink to this equation">#</a></span>\[	Df(\boldsymbol X)[\boldsymbol H] = \sum\limits_{i=1}^m \sum\limits_{j=1}^n \frac{\partial f (\boldsymbol X)}{\partial X_{ij}} H_{ij} = \mathrm{tr}(\nabla f(\boldsymbol X)^\top \boldsymbol H).\]</div>
+<span class="eqno">(47)<a class="headerlink" href="#equation-matrix-func-diff" title="Permalink to this equation">#</a></span>\[	Df(\boldsymbol X)[\boldsymbol H] = \sum\limits_{i=1}^m \sum\limits_{j=1}^n \frac{\partial f (\boldsymbol X)}{\partial X_{ij}} H_{ij} = \mathrm{tr}(\nabla f(\boldsymbol X)^\top \boldsymbol H).\]</div>
 <p>Здесь мы упаковали градиент функции <span class="math notranslate nohighlight">\(f\)</span> в матрице того же размера, что и матрица <span class="math notranslate nohighlight">\(\boldsymbol X\)</span>, а также воспользовались равенством</p>
 <div class="math notranslate nohighlight">
 \[
@@ -599,8 +1252,8 @@ f(x+h) - f(x) \approx Df(x)[h].
 </div>
 </section>
 <section id="gradients-shape">
-<h3>Gradients shape<a class="headerlink" href="#gradients-shape" title="Permalink to this heading">#</a></h3>
-<p>В <a class="reference internal" href="#equation-vector-func-diff">(50)</a> и <a class="reference internal" href="#equation-matrix-func-diff">(51)</a> пришлось столкнуться с давним знакомым из матанализа: градиентом <span class="math notranslate nohighlight">\(\nabla f\)</span> скалярной функции <span class="math notranslate nohighlight">\(f\)</span>, который состоит из частных производных этой функции по всем координатам её аргумента <span class="math notranslate nohighlight">\(x\)</span>. При этом его обычно упаковывают в ту же форму, что и сам аргумент: если <span class="math notranslate nohighlight">\(x\)</span> — вектор-строка, то и градиент записывается вектор-строкой, а если <span class="math notranslate nohighlight">\(x\)</span> — матрица, то и градиент тоже будет матрицей того же размера. Это важно, например, для алгоритма градиентного спуска, при осуществлении которого мы должны уметь прибавлять градиент к точке, в которой он посчитан.</p>
+<h3>Gradients shape<a class="headerlink" href="#gradients-shape" title="Permalink to this headline">#</a></h3>
+<p>В <a class="reference internal" href="#equation-vector-func-diff">(46)</a> и <a class="reference internal" href="#equation-matrix-func-diff">(47)</a> пришлось столкнуться с давним знакомым из матанализа: градиентом <span class="math notranslate nohighlight">\(\nabla f\)</span> скалярной функции <span class="math notranslate nohighlight">\(f\)</span>, который состоит из частных производных этой функции по всем координатам её аргумента <span class="math notranslate nohighlight">\(x\)</span>. При этом его обычно упаковывают в ту же форму, что и сам аргумент: если <span class="math notranslate nohighlight">\(x\)</span> — вектор-строка, то и градиент записывается вектор-строкой, а если <span class="math notranslate nohighlight">\(x\)</span> — матрица, то и градиент тоже будет матрицей того же размера. Это важно, например, для алгоритма градиентного спуска, при осуществлении которого мы должны уметь прибавлять градиент к точке, в которой он посчитан.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Иногда приходится дифференцировать функции, зависящие от различных наборов аргументов, и тогда во избежание неоднозачности в индексе у буквы <span class="math notranslate nohighlight">\(\nabla\)</span> указывают аргумент, по которому осуществляется дифференцирование. Например, запись <span class="math notranslate nohighlight">\(\nabla_{\boldsymbol w} f(\boldsymbol X, \boldsymbol y, \boldsymbol w)\)</span> недвусмысленно даёт понять, что мы дифференцируем фукнцию <span class="math notranslate nohighlight">\(f\)</span> по вектору <span class="math notranslate nohighlight">\(\boldsymbol w\)</span>, а <span class="math notranslate nohighlight">\(\boldsymbol X\)</span> и <span class="math notranslate nohighlight">\(\boldsymbol y\)</span> рассматриваем при этом как фиксированные параметры.</p>
@@ -608,13 +1261,13 @@ f(x+h) - f(x) \approx Df(x)[h].
 </section>
 </section>
 <section id="differentials-of-vector-functions">
-<h2>Differentials of vector functions<a class="headerlink" href="#differentials-of-vector-functions" title="Permalink to this heading">#</a></h2>
+<h2>Differentials of vector functions<a class="headerlink" href="#differentials-of-vector-functions" title="Permalink to this headline">#</a></h2>
 <p>Посмотрим теперь, как выглядит дифференцирование для функций, которые на выходе выдают не скаляр, а вектор или матрицу.</p>
 <section id="applying-a-function-elementwise">
-<h3>Applying a function elementwise<a class="headerlink" href="#applying-a-function-elementwise" title="Permalink to this heading">#</a></h3>
+<h3>Applying a function elementwise<a class="headerlink" href="#applying-a-function-elementwise" title="Permalink to this headline">#</a></h3>
 <p>Пусть</p>
 <div class="math notranslate nohighlight" id="equation-elementwise-func">
-<span class="eqno">(52)<a class="headerlink" href="#equation-elementwise-func" title="Permalink to this equation">#</a></span>\[\begin{split}f \colon \mathbb R^m \to \mathbb R^m,\quad  
+<span class="eqno">(48)<a class="headerlink" href="#equation-elementwise-func" title="Permalink to this equation">#</a></span>\[\begin{split}f \colon \mathbb R^m \to \mathbb R^m,\quad  
 f(\boldsymbol x) = \begin{pmatrix} 
 \varphi(x_1)\\ \vdots\\ \varphi(x_m) 
 \end{pmatrix},\end{split}\]</div>
@@ -649,7 +1302,7 @@ f(\boldsymbol x) = \begin{pmatrix}
 \]</div>
 </section>
 <section id="linear-matrix-function">
-<h3>Linear matrix function<a class="headerlink" href="#linear-matrix-function" title="Permalink to this heading">#</a></h3>
+<h3>Linear matrix function<a class="headerlink" href="#linear-matrix-function" title="Permalink to this headline">#</a></h3>
 <p>Let <span class="math notranslate nohighlight">\(f(\boldsymbol X) = \boldsymbol{XW}\)</span>, где <span class="math notranslate nohighlight">\(\boldsymbol X\)</span> и <span class="math notranslate nohighlight">\(\boldsymbol W\)</span> — матрицы подходящего размера. Тогда</p>
 <div class="math notranslate nohighlight">
 \[
@@ -662,10 +1315,10 @@ f(\boldsymbol X + \boldsymbol H) - f(\boldsymbol X) = (\boldsymbol X + \boldsymb
 </div>
 </section>
 <section id="vector-to-vector-functions">
-<h3>Vector-to-vector functions<a class="headerlink" href="#vector-to-vector-functions" title="Permalink to this heading">#</a></h3>
+<h3>Vector-to-vector functions<a class="headerlink" href="#vector-to-vector-functions" title="Permalink to this headline">#</a></h3>
 <p>Пусть <span class="math notranslate nohighlight">\(f\colon \mathbb R^m \to \mathbb R^n\)</span>, тогда дифференциал должен быть линейным оператором из <span class="math notranslate nohighlight">\(\mathbb R^m\)</span> в <span class="math notranslate nohighlight">\(\mathbb R^n\)</span>, то есть матрицей размера <span class="math notranslate nohighlight">\(n\times m\)</span>. И, действительно, с помощью <strong>матрицы Якоби</strong></p>
 <div class="math notranslate nohighlight" id="equation-jacobi">
-<span class="eqno">(53)<a class="headerlink" href="#equation-jacobi" title="Permalink to this equation">#</a></span>\[\begin{split}\boldsymbol J_f = \frac{\partial f}{\partial \boldsymbol x} = 
+<span class="eqno">(49)<a class="headerlink" href="#equation-jacobi" title="Permalink to this equation">#</a></span>\[\begin{split}\boldsymbol J_f = \frac{\partial f}{\partial \boldsymbol x} = 
 		    \begin{pmatrix} 
 	    	        \frac{\partial f_1}{\partial x_1} &amp; \ldots &amp; 
 	        	    \frac{\partial f_1}{\partial x_m} \\
@@ -676,7 +1329,7 @@ f(\boldsymbol X + \boldsymbol H) - f(\boldsymbol X) = (\boldsymbol X + \boldsymb
 <p>дифференциал записывается как <span class="math notranslate nohighlight">\(Df(\boldsymbol x)[\boldsymbol h] = \boldsymbol J_f(\boldsymbol x)\boldsymbol h\)</span>, или <span class="math notranslate nohighlight">\(df(\boldsymbol x) = \boldsymbol J_f(\boldsymbol x) d\boldsymbol x\)</span>.</p>
 <div class="important admonition">
 <p class="admonition-title">Exercise</p>
-<p>According to <a class="reference internal" href="#equation-jacobi">(53)</a>, the differential of the function <a class="reference internal" href="#equation-elementwise-func">(52)</a> should be a <span class="math notranslate nohighlight">\(m\times m\)</span> matrix. How does it look like?</p>
+<p>According to <a class="reference internal" href="#equation-jacobi">(49)</a>, the differential of the function <a class="reference internal" href="#equation-elementwise-func">(48)</a> should be a <span class="math notranslate nohighlight">\(m\times m\)</span> matrix. How does it look like?</p>
 </div>
 <p><strong>Вопрос на подумать</strong>. Как записать в векторно-матричной форме дифференциал функции <span class="math notranslate nohighlight">\(f\colon \mathbb R^m \to \mathbb R^n\)</span>, отображающей вектор-строку <span class="math notranslate nohighlight">\(\boldsymbol x = (x_1, \ldots, x_m)\)</span> в вектор-строку <span class="math notranslate nohighlight">\((f_1(\boldsymbol x), \ldots, f_n(\boldsymbol x))\)</span>?</p>
 <details>
@@ -687,8 +1340,8 @@ f(\boldsymbol X + \boldsymbol H) - f(\boldsymbol X) = (\boldsymbol X + \boldsymb
 </details></section>
 </section>
 <section id="rules-of-differentiation">
-<h2>Rules of differentiation<a class="headerlink" href="#rules-of-differentiation" title="Permalink to this heading">#</a></h2>
-<ol class="arabic simple">
+<h2>Rules of differentiation<a class="headerlink" href="#rules-of-differentiation" title="Permalink to this headline">#</a></h2>
+<ol class="simple">
 <li><p><strong>Производная константы</strong>. Если <span class="math notranslate nohighlight">\(f(x) = \mathrm{const}\)</span>, то <span class="math notranslate nohighlight">\(f(x+h) - f(x) = 0\)</span>, и по определению <span class="math notranslate nohighlight">\(Df(x)[h] = 0\)</span>. По этой же причине градиент постоянной функции векторного аргумента также равен нулю.</p></li>
 <li><p><strong>Дифференциал линейного отображения</strong>. Пусть <span class="math notranslate nohighlight">\(f(x)\)</span> — линейное отображение. Тогда</p></li>
 </ol>
@@ -697,7 +1350,7 @@ f(\boldsymbol X + \boldsymbol H) - f(\boldsymbol X) = (\boldsymbol X + \boldsymb
 f(x + h) - f(x) = f(x) + f(h) - f(x) = f(h).
 \]</div>
 <p>Поскольку справа линейное отображение, то по определению оно и является дифференциалом <span class="math notranslate nohighlight">\(Df(x)[h]\)</span>. Мы уже видели примеры таких ситуаций выше, когда рассматривали отображения умножения на матрицу слева или справа.</p>
-<ol class="arabic" start="3">
+<ol>
 <li><p><strong>Линейность дифференциала</strong>. Пусть функции <span class="math notranslate nohighlight">\(f \colon X \to V\)</span> и <span class="math notranslate nohighlight">\(g \colon X \to V\)</span> дифференцируемы в точке <span class="math notranslate nohighlight">\(x\in X\)</span> и <span class="math notranslate nohighlight">\(\alpha, \beta \in \mathbb R\)</span>. Тогда функция <span class="math notranslate nohighlight">\(\alpha f + \beta g\)</span> дифференцируема в точке <span class="math notranslate nohighlight">\(x\)</span>, и</p>
 <div class="math notranslate nohighlight">
 \[
@@ -763,7 +1416,7 @@ f(x + h) - f(x) = f(x) + f(h) - f(x) = f(h).
 </div>
 </section>
 <section id="second-differential">
-<h2>Second differential<a class="headerlink" href="#second-differential" title="Permalink to this heading">#</a></h2>
+<h2>Second differential<a class="headerlink" href="#second-differential" title="Permalink to this headline">#</a></h2>
 <p>Дифференциал <span class="math notranslate nohighlight">\(Df(x)[h]\)</span>  функции</p>
 <div class="math notranslate nohighlight">
 \[
@@ -831,126 +1484,58 @@ D^2f(x)[h_1, h_2] \text{ или } d^2f(x).
             mode: "python"
         },
         kernelOptions: {
-            name: "python3",
-            path: "./math/calculus"
+            kernelName: "python3",
+            path: "./math\calculus"
         },
         predefinedOutput: true
     }
     </script>
     <script>kernelName = 'python3'</script>
 
-                </article>
+              </div>
               
-
-              
-              
-                <footer class="bd-footer-article">
-                  
-<div class="footer-article-items footer-article__inner">
-  
-    <div class="footer-article-item"><!-- Previous / next buttons -->
-<div class="prev-next-area">
-    <a class="left-prev"
-       href="1-d.html"
-       title="previous page">
-      <i class="fa-solid fa-angle-left"></i>
-      <div class="prev-next-info">
-        <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">1-d calculus</p>
-      </div>
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+    <a class='left-prev' id="prev-link" href="1-d.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">1-d calculus</p>
+        </div>
     </a>
-    <a class="right-next"
-       href="matrix_diff.html"
-       title="next page">
-      <div class="prev-next-info">
+    <a class='right-next' id="next-link" href="matrix_diff.html" title="next page">
+    <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
         <p class="prev-next-title">Matrix calculus</p>
-      </div>
-      <i class="fa-solid fa-angle-right"></i>
-    </a>
-</div></div>
-  
-</div>
-
-                </footer>
-              
-            </div>
-            
-            
-              
-                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
-
-  <div class="sidebar-secondary-item">
-  <div class="page-toc tocsection onthispage">
-    <i class="fa-solid fa-list"></i> Contents
-  </div>
-  <nav class="bd-toc-nav page-toc">
-    <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#differentials-of-scalar-functions">Differentials of scalar functions</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#functions-of-vectors">Functions of vectors</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#functions-of-matrices">Functions of matrices</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#gradients-shape">Gradients shape</a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#differentials-of-vector-functions">Differentials of vector functions</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#applying-a-function-elementwise">Applying a function elementwise</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#linear-matrix-function">Linear matrix function</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#vector-to-vector-functions">Vector-to-vector functions</a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rules-of-differentiation">Rules of differentiation</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#second-differential">Second differential</a></li>
-</ul>
-  </nav></div>
-
-</div></div>
-              
-            
-          </div>
-          <footer class="bd-footer-content">
-            
-<div class="bd-footer-content__inner container">
-  
-  <div class="footer-item">
-    
-<p class="component-author">
-By KBTU
-</p>
-
-  </div>
-  
-  <div class="footer-item">
-    
-  <p class="copyright">
-    
-      © Copyright 2022.
-      <br/>
-    
-  </p>
-
-  </div>
-  
-  <div class="footer-item">
-    
-  </div>
-  
-  <div class="footer-item">
-    
-  </div>
-  
-</div>
-          </footer>
-        
-
-      </main>
     </div>
-  </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            </footer>
+        </div>
+    </div>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By KBTU<br/>
+  
+      &copy; Copyright 2022.<br/>
+</p>
+        </footer>
+    </div>
+    
+</div>
+
+
+      </div>
+    </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../../_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
-<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+  <script src="../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
 
-  <footer class="bd-footer">
-  </footer>
+
   </body>
 </html>

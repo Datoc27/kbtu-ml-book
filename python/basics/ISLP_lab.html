@@ -1,61 +1,50 @@
 
-
 <!DOCTYPE html>
 
-
-<html lang="en" >
-
+<html>
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
     <title>ISLP Lab &#8212; ML book</title>
-  
-  
-  
-  <script data-cfasync="false">
-    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
-    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
-  </script>
-  
+    
   <!-- Loaded before other Sphinx assets -->
-  <link href="../../_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
-<link href="../../_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
-<link href="../../_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link href="../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
 
-  
-  <link href="../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+    
+  <link rel="stylesheet"
+    href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
 
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
-    <link rel="stylesheet" href="../../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" href="../../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/proof.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
-  
+    <link rel="stylesheet" type="text/css" href="../../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
+    
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
-<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+  <link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
 
     <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/jquery.js"></script>
     <script src="../../_static/underscore.js"></script>
-    <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../../_static/doctools.js"></script>
     <script src="../../_static/clipboard.min.js"></script>
     <script src="../../_static/copybutton.js"></script>
-    <script src="../../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
     <script src="../../_static/togglebutton.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
-    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../../_static/design-tabs.js"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
 const thebe_selector = ".thebe,.cell"
@@ -65,93 +54,61 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'python/basics/ISLP_lab';</script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="NumPy" href="../numpy.html" />
     <link rel="prev" title="Classes" href="classes.html" />
-  <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <meta name="docsearch:language" content="en"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
   </head>
-  
-  
-  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
 
-  
-  
-  <a class="skip-link" href="#main-content">Skip to main content</a>
-  
-  <input type="checkbox"
-          class="sidebar-toggle"
-          name="__primary"
-          id="__primary"/>
-  <label class="overlay overlay-primary" for="__primary"></label>
-  
-  <input type="checkbox"
-          class="sidebar-toggle"
-          name="__secondary"
-          id="__secondary"/>
-  <label class="overlay overlay-secondary" for="__secondary"></label>
-  
-  <div class="search-button__wrapper">
-    <div class="search-button__overlay"></div>
-    <div class="search-button__search-container">
-<form class="bd-search d-flex align-items-center"
-      action="../../search.html"
-      method="get">
-  <i class="fa-solid fa-magnifying-glass"></i>
-  <input type="search"
-         class="form-control"
-         name="q"
-         id="search-input"
-         placeholder="Search this book..."
-         aria-label="Search this book..."
-         autocomplete="off"
-         autocorrect="off"
-         autocapitalize="off"
-         spellcheck="false"/>
-  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
-</form></div>
-  </div>
-  
-    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
-    </nav>
-  
-  <div class="bd-container">
-    <div class="bd-container__inner bd-page-width">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../../index.html">
       
-      <div class="bd-sidebar-primary bd-sidebar">
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
         
-
-  
-  <div class="sidebar-header-items sidebar-primary__section">
-    
-    
-    
-    
-  </div>
-  
-    <div class="sidebar-primary-items__start sidebar-primary__section">
-        <div class="sidebar-primary-item">
-  
-
-<a class="navbar-brand logo" href="../../README.html">
-  
-  
-  
-  
-    
-    
       
-    
-    
-    <img src="../../_static/logo.png" class="logo__image only-light" alt="Logo image"/>
-    <script>document.write(`<img src="../../_static/logo.png" class="logo__image only-dark" alt="Logo image"/>`);</script>
-  
-  
-</a></div>
-        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
-    <div class="bd-toc-item navbar-nav active">
+      
+      <img src="../../_static/logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">ML book</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
         
         <ul class="nav bd-sidenav bd-sidenav__home-link">
             <li class="toctree-l1">
@@ -160,368 +117,1141 @@ const thebe_selector_output = ".output, .cell_output"
                 </a>
             </li>
         </ul>
-        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Introduction to ML</span></p>
+        <p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Introduction to ML
+ </span>
+</p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1 has-children"><a class="reference internal" href="../../intro/intro_to_ML.html">Overview</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../intro/definition.html">Definitions of ML</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../intro/applications.html">Applications of ML</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../intro/data.html">Data</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../intro/ml_types.html">Types of ML</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../intro/knn.html">k-Nearest Neighbors</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../intro/model_selection.html">Model selection</a></li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../intro/intro_to_ML.html">
+   Overview
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../intro/definition.html">
+     Definitions of ML
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../intro/applications.html">
+     Applications of ML
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../intro/data.html">
+     Data
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../intro/ml_types.html">
+     Types of ML
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../intro/knn.html">
+     k-Nearest Neighbors
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../intro/model_selection.html">
+     Model selection
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../lin_reg/linear_regression.html">
+   Linear regression
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../lin_reg/simple.html">
+     Simple linear regression
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../lin_reg/polynomial.html">
+     Polynomial regression
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../lin_reg/multiple.html">
+     Multiple linear regression
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../lin_reg/regularization.html">
+     Regularization
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../lin_reg/numeric_opt.html">
+     Numeric optimization
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../lin_reg/general.html">
+     General linear model
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../linear_classification/classification.html">
+   Linear classification
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../linear_classification/log_reg.html">
+     Logistic regression
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../linear_classification/multi_log_reg.html">
+     Multinomial logistic regression
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../linear_classification/num_opt_log_reg.html">
+     Numeric optimization
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../linear_classification/svm.html">
+     Support Vector Machines (SVM)
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../eval_metrics/metrics.html">
+   Evaluation Metrics
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../eval_metrics/classification.html">
+     Classification Metrics
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../eval_metrics/ROC-AUC.html">
+     ROC-AUC
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../eval_metrics/regression.html">
+     Regression metrics
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../eval_metrics/cross_val.html">
+     Cross-validation
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../eval_metrics/hyperparameters.html">
+     Hyperparameters tuning
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../probabilistic_models/probabilistic.html">
+   Probabilistic models
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+  <label for="toctree-checkbox-5">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../probabilistic_models/bayesian_inference.html">
+     Bayesian inference
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../probabilistic_models/lin_reg_prob.html">
+     Probabilistic models for linear regression
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../probabilistic_models/log_reg_prob.html">
+     Probabilistic models for logistic regression
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../probabilistic_models/LDA.html">
+     Linear Discriminant Analysis (QDA)
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../probabilistic_models/QDA.html">
+     Quadratic Discriminant Analysis (QDA)
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../probabilistic_models/naive_bayes.html">
+     Naive Bayes classifier
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../decision_trees/decision_tree.html">
+   Decision Trees
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+  <label for="toctree-checkbox-6">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../decision_trees/classification.html">
+     Classification tree
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../decision_trees/regression.html">
+     Regression tree
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../decision_trees/impurity.html">
+     Impurity and information criterions
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../decision_trees/pruning.html">
+     Tree pruning
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../ensembling/ensemble.html">
+   Ensembling
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
+  <label for="toctree-checkbox-7">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../ensembling/bias_variance.html">
+     Bias-variance decomposition
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../ensembling/voting_stacking_blending.html">
+     Voting, stacking and blending
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../ensembling/bagging.html">
+     Bagging
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../ensembling/random_forest.html">
+     Random forests
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../gradient_boosting/gradient_boosting.html">
+   Gradient boosting
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
+  <label for="toctree-checkbox-8">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../gradient_boosting/boosting.html">
+     Boosting and additive modeling
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../gradient_boosting/generic_gb.html">
+     Generic gradient boosting
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../gradient_boosting/adaboost.html">
+     AdaBoost
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../gradient_boosting/xgboost.html">
+     XGBoost
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../gradient_boosting/catboost.html">
+     CatBoost
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../unsupervised_learning/unsupervised.html">
+   Unsupervised Learning
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/>
+  <label for="toctree-checkbox-9">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../unsupervised_learning/pca.html">
+     Principal components analysis (PCA)
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../unsupervised_learning/clustering_metrics.html">
+     Clustering metrics
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../unsupervised_learning/k_means.html">
+     K-means
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../unsupervised_learning/hierarchic_clustering.html">
+     Hierarchical Clustering
+    </a>
+   </li>
+  </ul>
+ </li>
 </ul>
-</li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../../lin_reg/linear_regression.html">Linear regression</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../lin_reg/simple.html">Simple linear regression</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../lin_reg/polynomial.html">Polynomial regression</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../lin_reg/multiple.html">Multiple linear regression</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../lin_reg/regularization.html">Regularization</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../lin_reg/numeric_opt.html">Numeric optimization</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../lin_reg/general.html">General linear model</a></li>
-</ul>
-</li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../../linear_classification/classification.html">Linear classification</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../linear_classification/log_reg.html">Logistic regression</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../linear_classification/multi_log_reg.html">Multinomial logistic regression</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../linear_classification/num_opt_log_reg.html">Numeric optimization</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../linear_classification/svm.html">Support Vector Machines (SVM)</a></li>
-</ul>
-</li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../../eval_metrics/metrics.html">Evaluation Metrics</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../eval_metrics/classification.html">Classification Metrics</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../eval_metrics/ROC-AUC.html">ROC-AUC</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../eval_metrics/regression.html">Regression metrics</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../eval_metrics/cross_val.html">Cross-validation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../eval_metrics/hyperparameters.html">Hyperparameters tuning</a></li>
-</ul>
-</li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../../probabilistic_models/probabilistic.html">Probabilistic models</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../probabilistic_models/bayesian_inference.html">Bayesian inference</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../probabilistic_models/lin_reg_prob.html">Probabilistic models for linear regression</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../probabilistic_models/log_reg_prob.html">Probabilistic models for logistic regression</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../probabilistic_models/LDA.html">Linear Discriminant Analysis (QDA)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../probabilistic_models/QDA.html">Quadratic Discriminant Analysis (QDA)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../probabilistic_models/naive_bayes.html">Naive Bayes classifier</a></li>
-</ul>
-</li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../../decision_trees/decision_tree.html">Decision Trees</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../decision_trees/classification.html">Classification tree</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../decision_trees/regression.html">Regression tree</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../decision_trees/impurity.html">Impurity and information criterions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../decision_trees/pruning.html">Tree pruning</a></li>
-</ul>
-</li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../../ensembling/ensemble.html">Ensembling</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-7"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../ensembling/bias_variance.html">Bias-variance decomposition</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../ensembling/voting_stacking_blending.html">Voting, stacking and blending</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../ensembling/bagging.html">Bagging</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../ensembling/random_forest.html">Random forests</a></li>
-</ul>
-</li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../../gradient_boosting/gradient_boosting.html">Gradient boosting</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-8"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../gradient_boosting/boosting.html">Boosting and additive modeling</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../gradient_boosting/generic_gb.html">Generic gradient boosting</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../gradient_boosting/adaboost.html">AdaBoost</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../gradient_boosting/xgboost.html">XGBoost</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../gradient_boosting/catboost.html">CatBoost</a></li>
-</ul>
-</li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../../unsupervised_learning/unsupervised.html">Unsupervised Learning</a><input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-9"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../unsupervised_learning/pca.html">Principal components analysis (PCA)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../unsupervised_learning/clustering_metrics.html">Clustering metrics</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../unsupervised_learning/k_means.html">K-means</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../unsupervised_learning/hierarchic_clustering.html">Hierarchical Clustering</a></li>
-</ul>
-</li>
-</ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Deep Learning</span></p>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Deep Learning
+ </span>
+</p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1 has-children"><a class="reference internal" href="../../mlp/mlp.html">Multilayer perceptron (MLP)</a><input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-10"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../mlp/layers.html">Layers of MLP</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../mlp/forward_backward_pass.html">Forward and backward pass</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../mlp/activations.html">Activation functions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../mlp/backprop.html">Back propagation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../mlp/weight_init.html">Weights initialization</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../mlp/regularization.html">Regularization in MLP</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../mlp/optimization_dl.html">Optimization in DL</a></li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../mlp/mlp.html">
+   Multilayer perceptron (MLP)
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/>
+  <label for="toctree-checkbox-10">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../mlp/layers.html">
+     Layers of MLP
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../mlp/forward_backward_pass.html">
+     Forward and backward pass
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../mlp/activations.html">
+     Activation functions
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../mlp/backprop.html">
+     Back propagation
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../mlp/weight_init.html">
+     Weights initialization
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../mlp/regularization.html">
+     Regularization in MLP
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../mlp/optimization_dl.html">
+     Optimization in DL
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../cnn/cnn.html">
+   CNN
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/>
+  <label for="toctree-checkbox-11">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../cnn/convolutions_2d.html">
+     Convolution of matrices
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../cnn/convolutions_3d.html">
+     Convolutions of tensors
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../cnn/pooling.html">
+     Pooling
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../cnn/back_prop.html">
+     Back propagation in CNN
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../cnn/augmentation.html">
+     Data augmentation
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../cnn/architectures.html">
+     Architectures of CNN
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../rnn/sequential.html">
+   Sequential NNs
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" type="checkbox"/>
+  <label for="toctree-checkbox-12">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../rnn/vanilla_rnn.html">
+     Vanilla RNN
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../rnn/lstm.html">
+     LSTM
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../rnn/gru.html">
+     GRU
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../rnn/attention.html">
+     Attention
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../rnn/transformers.html">
+     Transformers
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../gm/generative.html">
+   Generative models
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-13" name="toctree-checkbox-13" type="checkbox"/>
+  <label for="toctree-checkbox-13">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../gm/autoencoders.html">
+     Autoencoders
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../gm/vae.html">
+     Variational autoencoders (VAE)
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../gm/gan.html">
+     Ganerative adversarial networks (GAN)
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../rl/RL.html">
+   Reinforcement Learning
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-14" name="toctree-checkbox-14" type="checkbox"/>
+  <label for="toctree-checkbox-14">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../rl/basics.html">
+     RL basics
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../rl/multiarmed_bandits.html">
+     Multiarmed bandits
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../rl/mdp.html">
+     Markov decision process (MDP)
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../rl/q_learning.html">
+     Q-learning
+    </a>
+   </li>
+  </ul>
+ </li>
 </ul>
-</li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../../cnn/cnn.html">CNN</a><input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-11"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../cnn/convolutions_2d.html">Convolution of matrices</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../cnn/convolutions_3d.html">Convolutions of tensors</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../cnn/pooling.html">Pooling</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../cnn/back_prop.html">Back propagation in CNN</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../cnn/augmentation.html">Data augmentation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../cnn/architectures.html">Architectures of CNN</a></li>
-</ul>
-</li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../../rnn/sequential.html">Sequential NNs</a><input class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-12"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../rnn/vanilla_rnn.html">Vanilla RNN</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../rnn/lstm.html">LSTM</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../rnn/gru.html">GRU</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../rnn/attention.html">Attention</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../rnn/transformers.html">Transformers</a></li>
-</ul>
-</li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../../gm/generative.html">Generative models</a><input class="toctree-checkbox" id="toctree-checkbox-13" name="toctree-checkbox-13" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-13"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../gm/autoencoders.html">Autoencoders</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../gm/vae.html">Variational autoencoders (VAE)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../gm/gan.html">Ganerative adversarial networks (GAN)</a></li>
-</ul>
-</li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../../rl/RL.html">Reinforcement Learning</a><input class="toctree-checkbox" id="toctree-checkbox-14" name="toctree-checkbox-14" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-14"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../rl/basics.html">RL basics</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../rl/multiarmed_bandits.html">Multiarmed bandits</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../rl/mdp.html">Markov decision process (MDP)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../rl/q_learning.html">Q-learning</a></li>
-</ul>
-</li>
-</ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Python for ML</span></p>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Python for ML
+ </span>
+</p>
 <ul class="current nav bd-sidenav">
-<li class="toctree-l1 current active has-children"><a class="reference internal" href="../python_basics.html">Python Basics</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-15" name="toctree-checkbox-15" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-15"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="basic_types.html">Basic Types</a></li>
-<li class="toctree-l2"><a class="reference internal" href="variables.html">Variables</a></li>
-<li class="toctree-l2"><a class="reference internal" href="control_flow.html">Control flow</a></li>
-<li class="toctree-l2"><a class="reference internal" href="functions_strings.html">Functions</a></li>
-
-<li class="toctree-l2"><a class="reference internal" href="classes.html">Classes</a></li>
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">ISLP Lab</a></li>
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="../python_basics.html">
+   Python Basics
+  </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-15" name="toctree-checkbox-15" type="checkbox"/>
+  <label for="toctree-checkbox-15">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="current">
+   <li class="toctree-l2">
+    <a class="reference internal" href="basic_types.html">
+     Basic Types
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="variables.html">
+     Variables
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="control_flow.html">
+     Control flow
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="functions_strings.html">
+     Functions
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="classes.html">
+     Classes
+    </a>
+   </li>
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     ISLP Lab
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../numpy.html">
+   NumPy
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../pandas.html">
+   Pandas
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../visual.html">
+   Data visualization
+  </a>
+ </li>
 </ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../numpy.html">NumPy</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../pandas.html">Pandas</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../visual.html">Data visualization</a></li>
-</ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Math for ML</span></p>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Math for ML
+ </span>
+</p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1 has-children"><a class="reference internal" href="../../math/linear_algebra.html">Linear Algebra</a><input class="toctree-checkbox" id="toctree-checkbox-16" name="toctree-checkbox-16" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-16"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../math/lin_alg/vectors.html">Vectors</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../math/lin_alg/matrices.html">Matrices</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../math/lin_alg/linear_systems.html">Linear systems</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../math/lin_alg/inverse.html">Inverse matrix</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../math/lin_alg/rank.html">Rank of a matrix</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../math/lin_alg/orthogonality.html">Orthogonality</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../math/lin_alg/projections.html">Orthogonal projections</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../math/lin_alg/determinant.html">Determinants</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../math/lin_alg/eig.html">Eigenvalues and eigenvectors</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../math/lin_alg/diagonalize.html">Diagonalization</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../math/lin_alg/matrix_norms.html">Matrix norms</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../math/lin_alg/SVD.html">Singular Value Decomposition (SVD)</a></li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../math/linear_algebra.html">
+   Linear Algebra
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-16" name="toctree-checkbox-16" type="checkbox"/>
+  <label for="toctree-checkbox-16">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../math/lin_alg/vectors.html">
+     Vectors
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../math/lin_alg/matrices.html">
+     Matrices
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../math/lin_alg/linear_systems.html">
+     Linear systems
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../math/lin_alg/inverse.html">
+     Inverse matrix
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../math/lin_alg/rank.html">
+     Rank of a matrix
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../math/lin_alg/orthogonality.html">
+     Orthogonality
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../math/lin_alg/projections.html">
+     Orthogonal projections
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../math/lin_alg/determinant.html">
+     Determinants
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../math/lin_alg/eig.html">
+     Eigenvalues and eigenvectors
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../math/lin_alg/diagonalize.html">
+     Diagonalization
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../math/lin_alg/matrix_norms.html">
+     Matrix norms
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../math/lin_alg/SVD.html">
+     Singular Value Decomposition (SVD)
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../math/calculus.html">
+   Calculus
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-17" name="toctree-checkbox-17" type="checkbox"/>
+  <label for="toctree-checkbox-17">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../math/calculus/1-d.html">
+     1-d calculus
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../math/calculus/multivariate.html">
+     Multivariate calculus
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../math/calculus/matrix_diff.html">
+     Matrix calculus
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../math/probability.html">
+   Probability
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-18" name="toctree-checkbox-18" type="checkbox"/>
+  <label for="toctree-checkbox-18">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../math/proba/entropy.html">
+     Entropy
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../math/statistics.html">
+   Statistics
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-19" name="toctree-checkbox-19" type="checkbox"/>
+  <label for="toctree-checkbox-19">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../math/stats/MLE.html">
+     Maximum likelihood estimation (MLE)
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../math/optimization.html">
+   Optimization
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-20" name="toctree-checkbox-20" type="checkbox"/>
+  <label for="toctree-checkbox-20">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../math/optimization/GD.html">
+     Gradient descent
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../math/optimization/SGD.html">
+     Stochastic gradient descent
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../math/optimization/newton.html">
+     Newton’s method
+    </a>
+   </li>
+  </ul>
+ </li>
 </ul>
-</li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../../math/calculus.html">Calculus</a><input class="toctree-checkbox" id="toctree-checkbox-17" name="toctree-checkbox-17" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-17"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../math/calculus/1-d.html">1-d calculus</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../math/calculus/multivariate.html">Multivariate calculus</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../math/calculus/matrix_diff.html">Matrix calculus</a></li>
-</ul>
-</li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../../math/probability.html">Probability</a><input class="toctree-checkbox" id="toctree-checkbox-18" name="toctree-checkbox-18" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-18"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../math/proba/entropy.html">Entropy</a></li>
-</ul>
-</li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../../math/statistics.html">Statistics</a><input class="toctree-checkbox" id="toctree-checkbox-19" name="toctree-checkbox-19" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-19"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../math/stats/MLE.html">Maximum likelihood estimation (MLE)</a></li>
-</ul>
-</li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../../math/optimization.html">Optimization</a><input class="toctree-checkbox" id="toctree-checkbox-20" name="toctree-checkbox-20" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-20"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../math/optimization/GD.html">Gradient descent</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../math/optimization/SGD.html">Stochastic gradient descent</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../math/optimization/newton.html">Newton’s method</a></li>
-</ul>
-</li>
-</ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">HW</span></p>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  References
+ </span>
+</p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../../not_mnist_student.html">HW notMNIST</a></li>
-</ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">References</span></p>
-<ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../../notation.html">Notation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../bibliography.html">Bibliography</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../resources.html">ML resources</a></li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../notation.html">
+   Notation
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../bibliography.html">
+   Bibliography
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../resources.html">
+   ML resources
+  </a>
+ </li>
 </ul>
 
     </div>
 </nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
+            
+            <div class="navbar_extra_footer">
+            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+            </div>
+            
+        </div>
     </div>
-  
-  
-  <div class="sidebar-primary-items__end sidebar-primary__section">
-  </div>
-  
-  <div id="rtd-footer-container"></div>
-
-
-      </div>
-      
-      <main id="main-content" class="bd-main">
-        
-        
-
-<div class="sbt-scroll-pixel-helper"></div>
-
-          <div class="bd-content">
-            <div class="bd-article-container">
-              
-              <div class="bd-header-article">
-<div class="header-article-items header-article__inner">
-  
-    <div class="header-article-items__start">
-      
-        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
-  <span class="fa-solid fa-bars"></span>
-</label></div>
-      
-    </div>
-  
-  
-    <div class="header-article-items__end">
-      
-        <div class="header-article-item">
-
-<div class="article-header-buttons">
-
-
-
-
-
-<div class="dropdown dropdown-download-buttons">
-  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
-    <i class="fas fa-download"></i>
-  </button>
-  <ul class="dropdown-menu">
-      
-      
-      
-      <li><a href="../../_sources/python/basics/ISLP_lab.ipynb" target="_blank"
-   class="btn btn-sm btn-download-source-button dropdown-item"
-   title="Download source file"
-   data-bs-placement="left" data-bs-toggle="tooltip"
->
-  
-
-<span class="btn__icon-container">
-  <i class="fas fa-file"></i>
-  </span>
-<span class="btn__text-container">.ipynb</span>
-</a>
-</li>
-      
-      
-      
-      
-      <li>
-<button onclick="window.print()"
-  class="btn btn-sm btn-download-pdf-button dropdown-item"
-  title="Print to PDF"
-  data-bs-placement="left" data-bs-toggle="tooltip"
->
-  
-
-<span class="btn__icon-container">
-  <i class="fas fa-file-pdf"></i>
-  </span>
-<span class="btn__text-container">.pdf</span>
-</button>
-</li>
-      
-  </ul>
+    <div id="rtd-footer-container"></div>
 </div>
 
 
+          
 
 
-<button onclick="toggleFullScreen()"
-  class="btn btn-sm btn-fullscreen-button"
-  title="Fullscreen mode"
-  data-bs-placement="bottom" data-bs-toggle="tooltip"
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
 >
   
 
-<span class="btn__icon-container">
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<div class="menu-dropdown menu-dropdown-launch-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Launch interactive content">
+      <i class="fas fa-rocket"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/python/basics/ISLP_lab.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Launch on Binder"
+>
+  
+
+<span class="headerbtn__icon-container">
+  
+    <img src="../../_static/images/logo_binder.svg">
+  </span>
+<span class="headerbtn__text-container">Binder</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
   <i class="fas fa-expand"></i>
   </span>
 
 </button>
 
-
-<script>
-document.write(`
-  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
-    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
-    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
   </button>
-`);
-</script>
-
-<script>
-document.write(`
-  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass"></i>
-  </button>
-`);
-</script>
-<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="fa-solid fa-list"></span>
-</label>
-</div></div>
-      
-    </div>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="../../_sources/python/basics/ISLP_lab.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
   
-</div>
-</div>
-              
-              
 
-<div id="jb-print-docs-body" class="onlyprint">
-    <h1>ISLP Lab</h1>
-    <!-- Table of contents -->
-    <div id="print-main-content">
-        <div id="jb-print-toc">
-            
-            <div>
-                <h2> Contents </h2>
-            </div>
-            <nav aria-label="Page">
-                <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#getting-started">Getting Started</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#basic-commands">Basic Commands</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction-to-numerical-python">Introduction to Numerical Python</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#graphics">Graphics</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sequences-and-slice-notation">Sequences and Slice Notation</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#indexing-data">Indexing Data</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#indexing-rows-columns-and-submatrices">Indexing Rows, Columns, and Submatrices</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#boolean-indexing">Boolean Indexing</a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#loading-data">Loading Data</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#reading-in-a-data-set">Reading in a Data Set</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#basics-of-selecting-rows-and-columns">Basics of Selecting Rows and Columns</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#more-on-selecting-rows-and-columns">More on Selecting Rows and Columns</a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#for-loops">For Loops</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#string-formatting">String Formatting</a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#additional-graphical-and-numerical-summaries">Additional Graphical and Numerical Summaries</a></li>
-</ul>
-            </nav>
-        </div>
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.ipynb</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
     </div>
 </div>
 
-              
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#getting-started">
+   Getting Started
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#basic-commands">
+   Basic Commands
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#introduction-to-numerical-python">
+   Introduction to Numerical Python
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#graphics">
+   Graphics
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#sequences-and-slice-notation">
+   Sequences and Slice Notation
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#indexing-data">
+   Indexing Data
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#indexing-rows-columns-and-submatrices">
+     Indexing Rows, Columns, and Submatrices
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#boolean-indexing">
+     Boolean Indexing
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#loading-data">
+   Loading Data
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#reading-in-a-data-set">
+     Reading in a Data Set
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#basics-of-selecting-rows-and-columns">
+     Basics of Selecting Rows and Columns
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#more-on-selecting-rows-and-columns">
+     More on Selecting Rows and Columns
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#for-loops">
+   For Loops
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#string-formatting">
+     String Formatting
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#additional-graphical-and-numerical-summaries">
+   Additional Graphical and Numerical Summaries
+  </a>
+ </li>
+</ul>
+
+    </nav>
+</div>
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>ISLP Lab</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#getting-started">
+   Getting Started
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#basic-commands">
+   Basic Commands
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#introduction-to-numerical-python">
+   Introduction to Numerical Python
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#graphics">
+   Graphics
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#sequences-and-slice-notation">
+   Sequences and Slice Notation
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#indexing-data">
+   Indexing Data
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#indexing-rows-columns-and-submatrices">
+     Indexing Rows, Columns, and Submatrices
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#boolean-indexing">
+     Boolean Indexing
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#loading-data">
+   Loading Data
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#reading-in-a-data-set">
+     Reading in a Data Set
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#basics-of-selecting-rows-and-columns">
+     Basics of Selecting Rows and Columns
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#more-on-selecting-rows-and-columns">
+     More on Selecting Rows and Columns
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#for-loops">
+   For Loops
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#string-formatting">
+     String Formatting
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#additional-graphical-and-numerical-summaries">
+   Additional Graphical and Numerical Summaries
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <main id="main-content" role="main">
                 
-<div id="searchbox"></div>
-                <article class="bd-article" role="main">
-                  
+              <div>
+                
   <section class="tex2jax_ignore mathjax_ignore" id="islp-lab">
-<h1>ISLP Lab<a class="headerlink" href="#islp-lab" title="Permalink to this heading">#</a></h1>
+<h1>ISLP Lab<a class="headerlink" href="#islp-lab" title="Permalink to this headline">#</a></h1>
 <section id="getting-started">
-<h2>Getting Started<a class="headerlink" href="#getting-started" title="Permalink to this heading">#</a></h2>
+<h2>Getting Started<a class="headerlink" href="#getting-started" title="Permalink to this headline">#</a></h2>
 <p>To run the labs in this book, you will need two things:</p>
 <ul class="simple">
 <li><p>An installation of <code class="docutils literal notranslate"><span class="pre">Python3</span></code>, which is the specific version of <code class="docutils literal notranslate"><span class="pre">Python</span></code>  used in the labs.</p></li>
@@ -542,7 +1272,7 @@ Now run the following code at the command line: <code class="docutils literal no
 <p>If you’re using Windows, you can use the <code class="docutils literal notranslate"><span class="pre">start</span> <span class="pre">menu</span></code> to access <code class="docutils literal notranslate"><span class="pre">anaconda</span></code>, and follow the links. For example, to install <code class="docutils literal notranslate"><span class="pre">ISLP</span></code> and run this lab, you can run the same code above in an <code class="docutils literal notranslate"><span class="pre">anaconda</span></code> shell.</p>
 </section>
 <section id="basic-commands">
-<h2>Basic Commands<a class="headerlink" href="#basic-commands" title="Permalink to this heading">#</a></h2>
+<h2>Basic Commands<a class="headerlink" href="#basic-commands" title="Permalink to this headline">#</a></h2>
 <p>In this lab, we will introduce some simple <code class="docutils literal notranslate"><span class="pre">Python</span></code> commands.
 For more resources about <code class="docutils literal notranslate"><span class="pre">Python</span></code> in general, readers may want to consult the tutorial at <a class="reference external" href="https://docs.python.org/3/tutorial/">docs.python.org/3/tutorial/</a>.</p>
 <p>Like most programming languages, <code class="docutils literal notranslate"><span class="pre">Python</span></code> uses <em>functions</em>
@@ -652,7 +1382,7 @@ In the next section, we will introduce the  <code class="docutils literal notran
 See <a class="reference external" href="https://docs.scipy.org/doc/numpy/user/quickstart.html">docs.scipy.org/doc/numpy/user/quickstart.html</a> for more information about <code class="docutils literal notranslate"><span class="pre">numpy</span></code>.</p>
 </section>
 <section id="introduction-to-numerical-python">
-<h2>Introduction to Numerical Python<a class="headerlink" href="#introduction-to-numerical-python" title="Permalink to this heading">#</a></h2>
+<h2>Introduction to Numerical Python<a class="headerlink" href="#introduction-to-numerical-python" title="Permalink to this headline">#</a></h2>
 <p>As mentioned earlier, this book makes use of functionality   that is contained in the <code class="docutils literal notranslate"><span class="pre">numpy</span></code>
 <em>library</em>, or <em>package</em>. A package is a collection of modules that are not necessarily included in
 the base <code class="docutils literal notranslate"><span class="pre">Python</span></code> distribution. The name <code class="docutils literal notranslate"><span class="pre">numpy</span></code> is an abbreviation for <em>numerical Python</em>.</p>
@@ -1195,7 +1925,7 @@ To see this, we construct a <span class="math notranslate nohighlight">\(10 \tim
 </div>
 </section>
 <section id="graphics">
-<h2>Graphics<a class="headerlink" href="#graphics" title="Permalink to this heading">#</a></h2>
+<h2>Graphics<a class="headerlink" href="#graphics" title="Permalink to this headline">#</a></h2>
 <p>In <code class="docutils literal notranslate"><span class="pre">Python</span></code>, common practice is to use  the library
 <code class="docutils literal notranslate"><span class="pre">matplotlib</span></code> for graphics.
 However, since <code class="docutils literal notranslate"><span class="pre">Python</span></code> was not written with data analysis in mind,
@@ -1230,7 +1960,7 @@ type <code class="docutils literal notranslate"><span class="pre">ax.plot?</span
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/c558c073bac27c5f3f161ac1dbdc439bc746f247a7d5c648698fd1919de7b15c.png" src="../../_images/c558c073bac27c5f3f161ac1dbdc439bc746f247a7d5c648698fd1919de7b15c.png" />
+<img alt="../../_images/ISLP_lab_96_0.png" src="../../_images/ISLP_lab_96_0.png" />
 </div>
 </div>
 <p>We pause here to note that we have <em>unpacked</em> the tuple of length two returned by <code class="docutils literal notranslate"><span class="pre">subplots()</span></code> into the two distinct
@@ -1245,7 +1975,7 @@ is typically preferred to the following equivalent but slightly more verbose cod
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/be607e0f2f54256fd2da91984631c18edcde88ea3512fd15e4ceb3c6e323218f.png" src="../../_images/be607e0f2f54256fd2da91984631c18edcde88ea3512fd15e4ceb3c6e323218f.png" />
+<img alt="../../_images/ISLP_lab_98_0.png" src="../../_images/ISLP_lab_98_0.png" />
 </div>
 </div>
 <p>We see that our earlier cell produced a line plot, which is the default. To create a scatterplot, we provide an additional argument to <code class="docutils literal notranslate"><span class="pre">ax.plot()</span></code>, indicating that circles should be displayed.</p>
@@ -1257,7 +1987,7 @@ is typically preferred to the following equivalent but slightly more verbose cod
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/f2ed7eeb6c1689cf671d05025fea9f8ca9d97b500210d7e45c0bc5e02832d317.png" src="../../_images/f2ed7eeb6c1689cf671d05025fea9f8ca9d97b500210d7e45c0bc5e02832d317.png" />
+<img alt="../../_images/ISLP_lab_100_0.png" src="../../_images/ISLP_lab_100_0.png" />
 </div>
 </div>
 <p>Different values
@@ -1272,7 +2002,7 @@ as well as different linestyles.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/f2ed7eeb6c1689cf671d05025fea9f8ca9d97b500210d7e45c0bc5e02832d317.png" src="../../_images/f2ed7eeb6c1689cf671d05025fea9f8ca9d97b500210d7e45c0bc5e02832d317.png" />
+<img alt="../../_images/ISLP_lab_103_0.png" src="../../_images/ISLP_lab_103_0.png" />
 </div>
 </div>
 <p>Notice that in the code blocks above, we have ended
@@ -1290,7 +2020,7 @@ If we omit the trailing semi-colon, then we obtain the following output:</p>
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.collections.PathCollection at 0x110a86c20&gt;
 </pre></div>
 </div>
-<img alt="../../_images/f2ed7eeb6c1689cf671d05025fea9f8ca9d97b500210d7e45c0bc5e02832d317.png" src="../../_images/f2ed7eeb6c1689cf671d05025fea9f8ca9d97b500210d7e45c0bc5e02832d317.png" />
+<img alt="../../_images/ISLP_lab_105_1.png" src="../../_images/ISLP_lab_105_1.png" />
 </div>
 </div>
 <p>In what follows, we will use
@@ -1309,7 +2039,7 @@ of <code class="docutils literal notranslate"><span class="pre">ax</span></code>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/abd96aae5088fe73783dc94f4af21f76b856b326a92647384812ca2e76c6e98c.png" src="../../_images/abd96aae5088fe73783dc94f4af21f76b856b326a92647384812ca2e76c6e98c.png" />
+<img alt="../../_images/ISLP_lab_108_0.png" src="../../_images/ISLP_lab_108_0.png" />
 </div>
 </div>
 <p>Having access to the figure object <code class="docutils literal notranslate"><span class="pre">fig</span></code> itself means that we can go in and change some aspects and then redisplay it. Here, we change
@@ -1322,7 +2052,7 @@ the size from <code class="docutils literal notranslate"><span class="pre">(8,</
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/cef7fa95c61c1409db0a4333f764fcc80abc337bbb5cea5df40dbc85b0af7668.png" src="../../_images/cef7fa95c61c1409db0a4333f764fcc80abc337bbb5cea5df40dbc85b0af7668.png" />
+<img alt="../../_images/ISLP_lab_110_0.png" src="../../_images/ISLP_lab_110_0.png" />
 </div>
 </div>
 <p>Occasionally we will want to create several plots within a figure. This can be
@@ -1342,7 +2072,7 @@ The <code class="docutils literal notranslate"><span class="pre">axes</span></co
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/52ca98ea24f5bfa67164a6b8e7ce5bfe3dbec03a98d54c9f0f2d48755561351d.png" src="../../_images/52ca98ea24f5bfa67164a6b8e7ce5bfe3dbec03a98d54c9f0f2d48755561351d.png" />
+<img alt="../../_images/ISLP_lab_113_0.png" src="../../_images/ISLP_lab_113_0.png" />
 </div>
 </div>
 <p>We now produce a scatter plot with <code class="docutils literal notranslate"><span class="pre">'o'</span></code> in the second column of the first row and
@@ -1356,7 +2086,7 @@ a scatter plot with <code class="docutils literal notranslate"><span class="pre"
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/d9457a0cc03581c1de6aad65f829641e64a0e2d679757b16d2b8d94693c13e1c.png" src="../../_images/d9457a0cc03581c1de6aad65f829641e64a0e2d679757b16d2b8d94693c13e1c.png" />
+<img alt="../../_images/ISLP_lab_115_0.png" src="../../_images/ISLP_lab_115_0.png" />
 </div>
 </div>
 <p>Type  <code class="docutils literal notranslate"><span class="pre">subplots?</span></code> to learn more about
@@ -1382,7 +2112,7 @@ to determine how large the figure will be in pixels.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/13bf4894fd215dba81e8d6a8d094a3f096375cfd969a54f4a667ff949103263f.png" src="../../_images/13bf4894fd215dba81e8d6a8d094a3f096375cfd969a54f4a667ff949103263f.png" />
+<img alt="../../_images/ISLP_lab_120_0.png" src="../../_images/ISLP_lab_120_0.png" />
 </div>
 </div>
 <p>We now create some more sophisticated plots. The
@@ -1408,7 +2138,7 @@ which returns a vector of <code class="docutils literal notranslate"><span class
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/e22e06d0a25bbd1c3e32db4200919d514723d062a895d94082a75244e5e7b94c.png" src="../../_images/e22e06d0a25bbd1c3e32db4200919d514723d062a895d94082a75244e5e7b94c.png" />
+<img alt="../../_images/ISLP_lab_122_0.png" src="../../_images/ISLP_lab_122_0.png" />
 </div>
 </div>
 <p>We can increase the resolution by adding more levels to the image.</p>
@@ -1420,7 +2150,7 @@ which returns a vector of <code class="docutils literal notranslate"><span class
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/f2492f869a8c4dfb940ff68c588dd76784f3085070b2ded333e2d3792b2a8182.png" src="../../_images/f2492f869a8c4dfb940ff68c588dd76784f3085070b2ded333e2d3792b2a8182.png" />
+<img alt="../../_images/ISLP_lab_124_0.png" src="../../_images/ISLP_lab_124_0.png" />
 </div>
 </div>
 <p>To fine-tune the output of the
@@ -1439,12 +2169,12 @@ weather forecasts.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/9fc9067b1d5568ba32e5f54d2ec5c538c4ffb1761d2d4fe772b00fbf937d8c76.png" src="../../_images/9fc9067b1d5568ba32e5f54d2ec5c538c4ffb1761d2d4fe772b00fbf937d8c76.png" />
+<img alt="../../_images/ISLP_lab_126_0.png" src="../../_images/ISLP_lab_126_0.png" />
 </div>
 </div>
 </section>
 <section id="sequences-and-slice-notation">
-<h2>Sequences and Slice Notation<a class="headerlink" href="#sequences-and-slice-notation" title="Permalink to this heading">#</a></h2>
+<h2>Sequences and Slice Notation<a class="headerlink" href="#sequences-and-slice-notation" title="Permalink to this headline">#</a></h2>
 <p>As seen above, the
 function <code class="docutils literal notranslate"><span class="pre">np.linspace()</span></code>  can be used to create a sequence
 of numbers.</p>
@@ -1513,7 +2243,7 @@ This also explains why the earlier <code class="docutils literal notranslate"><s
 See the documentation <code class="docutils literal notranslate"><span class="pre">slice?</span></code> for useful options in creating slices.</p>
 </section>
 <section id="indexing-data">
-<h2>Indexing Data<a class="headerlink" href="#indexing-data" title="Permalink to this heading">#</a></h2>
+<h2>Indexing Data<a class="headerlink" href="#indexing-data" title="Permalink to this headline">#</a></h2>
 <p>To begin, we  create a two-dimensional <code class="docutils literal notranslate"><span class="pre">numpy</span></code> array.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1548,7 +2278,7 @@ column. (As usual, <code class="docutils literal notranslate"><span class="pre">
 <p>The first number after the open-bracket symbol <code class="docutils literal notranslate"><span class="pre">[</span></code>
 refers to the row, and the second number refers to the column.</p>
 <section id="indexing-rows-columns-and-submatrices">
-<h3>Indexing Rows, Columns, and Submatrices<a class="headerlink" href="#indexing-rows-columns-and-submatrices" title="Permalink to this heading">#</a></h3>
+<h3>Indexing Rows, Columns, and Submatrices<a class="headerlink" href="#indexing-rows-columns-and-submatrices" title="Permalink to this headline">#</a></h3>
 <p>To select multiple rows at a time, we can pass in a list
 specifying our selection. For instance, <code class="docutils literal notranslate"><span class="pre">[1,3]</span></code> will retrieve the second and fourth rows:</p>
 <div class="cell docutils container">
@@ -1683,7 +2413,7 @@ are treated differently by <code class="docutils literal notranslate"><span clas
 Slices can be used to extract objects from arbitrary sequences, such as strings, lists, and tuples, while the use of lists for indexing is more limited.</p>
 </section>
 <section id="boolean-indexing">
-<h3>Boolean Indexing<a class="headerlink" href="#boolean-indexing" title="Permalink to this heading">#</a></h3>
+<h3>Boolean Indexing<a class="headerlink" href="#boolean-indexing" title="Permalink to this headline">#</a></h3>
 <p>In <code class="docutils literal notranslate"><span class="pre">numpy</span></code>, a <em>Boolean</em> is a type  that equals either   <code class="docutils literal notranslate"><span class="pre">True</span></code> or  <code class="docutils literal notranslate"><span class="pre">False</span></code> (also represented as <span class="math notranslate nohighlight">\(1\)</span> and <span class="math notranslate nohighlight">\(0\)</span>, respectively).
 The next line creates a vector of <span class="math notranslate nohighlight">\(0\)</span>’s, represented as Booleans, of length equal to the first dimension of <code class="docutils literal notranslate"><span class="pre">A</span></code>.</p>
 <div class="cell docutils container">
@@ -1801,7 +2531,7 @@ to the <code class="docutils literal notranslate"><span class="pre">numpy</span>
 </section>
 </section>
 <section id="loading-data">
-<h2>Loading Data<a class="headerlink" href="#loading-data" title="Permalink to this heading">#</a></h2>
+<h2>Loading Data<a class="headerlink" href="#loading-data" title="Permalink to this headline">#</a></h2>
 <p>Data sets often contain different types of data, and may have names associated with the rows or columns.
 For these reasons, they typically are best accommodated using a
 <em>data frame</em>.
@@ -1811,7 +2541,7 @@ different arrays can be combined to form a row.
 The <code class="docutils literal notranslate"><span class="pre">pandas</span></code>
 library can be used to create and work with data frame objects.</p>
 <section id="reading-in-a-data-set">
-<h3>Reading in a Data Set<a class="headerlink" href="#reading-in-a-data-set" title="Permalink to this heading">#</a></h3>
+<h3>Reading in a Data Set<a class="headerlink" href="#reading-in-a-data-set" title="Permalink to this headline">#</a></h3>
 <p>The first step of most analyses involves importing a data set into
 <code class="docutils literal notranslate"><span class="pre">Python</span></code>.<br />
 Before attempting to load
@@ -2115,7 +2845,7 @@ observations,  we choose to use the <code class="docutils literal notranslate"><
 </div>
 </section>
 <section id="basics-of-selecting-rows-and-columns">
-<h3>Basics of Selecting Rows and Columns<a class="headerlink" href="#basics-of-selecting-rows-and-columns" title="Permalink to this heading">#</a></h3>
+<h3>Basics of Selecting Rows and Columns<a class="headerlink" href="#basics-of-selecting-rows-and-columns" title="Permalink to this headline">#</a></h3>
 <p>We can use <code class="docutils literal notranslate"><span class="pre">Auto.columns</span></code>  to check the variable names.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -3624,7 +4354,7 @@ a single call to <code class="docutils literal notranslate"><span class="pre">il
 </div>
 </section>
 <section id="more-on-selecting-rows-and-columns">
-<h3>More on Selecting Rows and Columns<a class="headerlink" href="#more-on-selecting-rows-and-columns" title="Permalink to this heading">#</a></h3>
+<h3>More on Selecting Rows and Columns<a class="headerlink" href="#more-on-selecting-rows-and-columns" title="Permalink to this headline">#</a></h3>
 <p>Suppose now that we want to create a data frame consisting of the  <code class="docutils literal notranslate"><span class="pre">weight</span></code> and <code class="docutils literal notranslate"><span class="pre">origin</span></code>  of the subset of cars with
 <code class="docutils literal notranslate"><span class="pre">year</span></code> greater than 80 — i.e. those built after 1980.
 To do this, we first create a Boolean array that indexes the rows.
@@ -4815,7 +5545,7 @@ with a function (typically a <code class="docutils literal notranslate"><span cl
 </section>
 </section>
 <section id="for-loops">
-<h2>For Loops<a class="headerlink" href="#for-loops" title="Permalink to this heading">#</a></h2>
+<h2>For Loops<a class="headerlink" href="#for-loops" title="Permalink to this headline">#</a></h2>
 <p>A <code class="docutils literal notranslate"><span class="pre">for</span></code> loop is a standard tool in many languages that
 repeatedly evaluates some chunk of code while
 varying different values inside the code.
@@ -4890,7 +5620,7 @@ loops over a sequence of tuples.</p>
 </div>
 </div>
 <section id="string-formatting">
-<h3>String Formatting<a class="headerlink" href="#string-formatting" title="Permalink to this heading">#</a></h3>
+<h3>String Formatting<a class="headerlink" href="#string-formatting" title="Permalink to this headline">#</a></h3>
 <p>In the code chunk above we also printed a string
 displaying the total. However, the object <code class="docutils literal notranslate"><span class="pre">total</span></code>
 is an  integer and not a string.
@@ -5006,7 +5736,7 @@ includes many helpful and more complex examples.</p>
 </section>
 </section>
 <section id="additional-graphical-and-numerical-summaries">
-<h2>Additional Graphical and Numerical Summaries<a class="headerlink" href="#additional-graphical-and-numerical-summaries" title="Permalink to this heading">#</a></h2>
+<h2>Additional Graphical and Numerical Summaries<a class="headerlink" href="#additional-graphical-and-numerical-summaries" title="Permalink to this headline">#</a></h2>
 <p>We can use the <code class="docutils literal notranslate"><span class="pre">ax.plot()</span></code> or  <code class="docutils literal notranslate"><span class="pre">ax.scatter()</span></code>  functions to display the quantitative variables. However, simply typing the variable names will produce an error message,
 because <code class="docutils literal notranslate"><span class="pre">Python</span></code> does not know to look in the  <code class="docutils literal notranslate"><span class="pre">Auto</span></code>  data set for those variables.</p>
 <div class="cell docutils container">
@@ -5026,7 +5756,7 @@ because <code class="docutils literal notranslate"><span class="pre">Python</spa
 <span class="ne">NameError</span>: name &#39;horsepower&#39; is not defined
 </pre></div>
 </div>
-<img alt="../../_images/be607e0f2f54256fd2da91984631c18edcde88ea3512fd15e4ceb3c6e323218f.png" src="../../_images/be607e0f2f54256fd2da91984631c18edcde88ea3512fd15e4ceb3c6e323218f.png" />
+<img alt="../../_images/ISLP_lab_238_1.png" src="../../_images/ISLP_lab_238_1.png" />
 </div>
 </div>
 <p>We can address this by accessing the columns directly:</p>
@@ -5038,7 +5768,7 @@ because <code class="docutils literal notranslate"><span class="pre">Python</spa
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/6f776e3253769b347628c666bd03ccd7decce37d4f6604173268f1847735a459.png" src="../../_images/6f776e3253769b347628c666bd03ccd7decce37d4f6604173268f1847735a459.png" />
+<img alt="../../_images/ISLP_lab_240_0.png" src="../../_images/ISLP_lab_240_0.png" />
 </div>
 </div>
 <p>Alternatively, we can use the <code class="docutils literal notranslate"><span class="pre">plot()</span></code> method with the call <code class="docutils literal notranslate"><span class="pre">Auto.plot()</span></code>.
@@ -5054,7 +5784,7 @@ an axes. We can use it to update the plot as we did previously:</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/862b292d5899f33df6a5d2101f17436df6993765de2baa8497b603e72292f24c.png" src="../../_images/862b292d5899f33df6a5d2101f17436df6993765de2baa8497b603e72292f24c.png" />
+<img alt="../../_images/ISLP_lab_242_0.png" src="../../_images/ISLP_lab_242_0.png" />
 </div>
 </div>
 <p>If we want to save
@@ -5082,7 +5812,7 @@ within a figure.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/d78a5f5ad86e9c22ccba80011038e264cf2346305adf3ae406232a4347686abd.png" src="../../_images/d78a5f5ad86e9c22ccba80011038e264cf2346305adf3ae406232a4347686abd.png" />
+<img alt="../../_images/ISLP_lab_246_0.png" src="../../_images/ISLP_lab_246_0.png" />
 </div>
 </div>
 <p>Note also that the columns of a data frame can be accessed as attributes: try typing in <code class="docutils literal notranslate"><span class="pre">Auto.horsepower</span></code>.</p>
@@ -5113,7 +5843,7 @@ the <code class="docutils literal notranslate"><span class="pre">boxplot()</span
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/6d536979203ea32edaac0a11cb8e37492284000ad4d73d019931658d97b4c217.png" src="../../_images/6d536979203ea32edaac0a11cb8e37492284000ad4d73d019931658d97b4c217.png" />
+<img alt="../../_images/ISLP_lab_251_0.png" src="../../_images/ISLP_lab_251_0.png" />
 </div>
 </div>
 <p>The <code class="docutils literal notranslate"><span class="pre">hist()</span></code>  method can be used to plot a <em>histogram</em>.</p>
@@ -5125,7 +5855,7 @@ the <code class="docutils literal notranslate"><span class="pre">boxplot()</span
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/bad41f4d104c00be46eedebad0a6544d33b3dad7bcb5a7a1e6d878420b7091af.png" src="../../_images/bad41f4d104c00be46eedebad0a6544d33b3dad7bcb5a7a1e6d878420b7091af.png" />
+<img alt="../../_images/ISLP_lab_253_0.png" src="../../_images/ISLP_lab_253_0.png" />
 </div>
 </div>
 <p>The color of the bars and the number of bins can be changed:</p>
@@ -5137,7 +5867,7 @@ the <code class="docutils literal notranslate"><span class="pre">boxplot()</span
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/99b7d39877d9dc817993a20ca037226a00e7888b475601e9b4248d32d527c5f4.png" src="../../_images/99b7d39877d9dc817993a20ca037226a00e7888b475601e9b4248d32d527c5f4.png" />
+<img alt="../../_images/ISLP_lab_255_0.png" src="../../_images/ISLP_lab_255_0.png" />
 </div>
 </div>
 <p>See <code class="docutils literal notranslate"><span class="pre">Auto.hist?</span></code> for more plotting
@@ -5151,7 +5881,7 @@ a data frame.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/f3cb5c9bf5f6615e2e65c02331d74fc28697876a2da6af7a414167959eeb4916.png" src="../../_images/f3cb5c9bf5f6615e2e65c02331d74fc28697876a2da6af7a414167959eeb4916.png" />
+<img alt="../../_images/ISLP_lab_257_0.png" src="../../_images/ISLP_lab_257_0.png" />
 </div>
 </div>
 <p>We can also produce scatterplots
@@ -5165,7 +5895,7 @@ for a subset of the variables.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/430c5a976b0863b1a4d02aa15b04233bcc3a0941f2d4382a3336e9dd9d66bfb0.png" src="../../_images/430c5a976b0863b1a4d02aa15b04233bcc3a0941f2d4382a3336e9dd9d66bfb0.png" />
+<img alt="../../_images/ISLP_lab_259_0.png" src="../../_images/ISLP_lab_259_0.png" />
 </div>
 </div>
 <p>The <code class="docutils literal notranslate"><span class="pre">describe()</span></code>  method produces a numerical summary of each column in a data frame.</p>
@@ -5281,133 +6011,58 @@ Name: mpg, dtype: float64
             mode: "python"
         },
         kernelOptions: {
-            name: "python3",
-            path: "./python/basics"
+            kernelName: "python3",
+            path: "./python\basics"
         },
         predefinedOutput: true
     }
     </script>
     <script>kernelName = 'python3'</script>
 
-                </article>
+              </div>
               
-
-              
-              
-                <footer class="bd-footer-article">
-                  
-<div class="footer-article-items footer-article__inner">
-  
-    <div class="footer-article-item"><!-- Previous / next buttons -->
-<div class="prev-next-area">
-    <a class="left-prev"
-       href="classes.html"
-       title="previous page">
-      <i class="fa-solid fa-angle-left"></i>
-      <div class="prev-next-info">
-        <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Classes</p>
-      </div>
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+    <a class='left-prev' id="prev-link" href="classes.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Classes</p>
+        </div>
     </a>
-    <a class="right-next"
-       href="../numpy.html"
-       title="next page">
-      <div class="prev-next-info">
+    <a class='right-next' id="next-link" href="../numpy.html" title="next page">
+    <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
         <p class="prev-next-title">NumPy</p>
-      </div>
-      <i class="fa-solid fa-angle-right"></i>
-    </a>
-</div></div>
-  
-</div>
-
-                </footer>
-              
-            </div>
-            
-            
-              
-                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
-
-  <div class="sidebar-secondary-item">
-  <div class="page-toc tocsection onthispage">
-    <i class="fa-solid fa-list"></i> Contents
-  </div>
-  <nav class="bd-toc-nav page-toc">
-    <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#getting-started">Getting Started</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#basic-commands">Basic Commands</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction-to-numerical-python">Introduction to Numerical Python</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#graphics">Graphics</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sequences-and-slice-notation">Sequences and Slice Notation</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#indexing-data">Indexing Data</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#indexing-rows-columns-and-submatrices">Indexing Rows, Columns, and Submatrices</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#boolean-indexing">Boolean Indexing</a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#loading-data">Loading Data</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#reading-in-a-data-set">Reading in a Data Set</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#basics-of-selecting-rows-and-columns">Basics of Selecting Rows and Columns</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#more-on-selecting-rows-and-columns">More on Selecting Rows and Columns</a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#for-loops">For Loops</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#string-formatting">String Formatting</a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#additional-graphical-and-numerical-summaries">Additional Graphical and Numerical Summaries</a></li>
-</ul>
-  </nav></div>
-
-</div></div>
-              
-            
-          </div>
-          <footer class="bd-footer-content">
-            
-<div class="bd-footer-content__inner container">
-  
-  <div class="footer-item">
-    
-<p class="component-author">
-By KBTU
-</p>
-
-  </div>
-  
-  <div class="footer-item">
-    
-  <p class="copyright">
-    
-      © Copyright 2022.
-      <br/>
-    
-  </p>
-
-  </div>
-  
-  <div class="footer-item">
-    
-  </div>
-  
-  <div class="footer-item">
-    
-  </div>
-  
-</div>
-          </footer>
-        
-
-      </main>
     </div>
-  </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            </footer>
+        </div>
+    </div>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By KBTU<br/>
+  
+      &copy; Copyright 2022.<br/>
+</p>
+        </footer>
+    </div>
+    
+</div>
+
+
+      </div>
+    </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../../_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
-<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+  <script src="../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
 
-  <footer class="bd-footer">
-  </footer>
+
   </body>
 </html>
